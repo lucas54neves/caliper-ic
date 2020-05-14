@@ -1,13 +1,18 @@
 #!bin/bash
-# Instala o Git
-sudo apt-get install -y git
-# Diretorio Home
-cd ~/
-# Clona o repositorio do Caliper
-git clone https://github.com/hyperledger/caliper.git
-# Entra no diretorio do Caliper
-cd ~/caliper
-# Muda a versao do Caliper
-git checkout 4156c4da7105fd1c2b848573a9943bfc9900becb
-# Instala as dependencias do Caliper
+# Update
+sudo apt update && sudo apt upgrade -y
+
+# Install Git
+sudo apt install -y git
+
+# Clone of the 'Caliper-docker' repository
+git clone https://github.com/internet-sicherheit/caliper-docker
+
+# Caliper directory
+cd caliper-docker/caliper
+
+# Get access to the local update config store via
+sudo chown -R $USER:$(id -gn $USER) /home/lucas/.config
+
+# Install dependencies
 sudo npm install
