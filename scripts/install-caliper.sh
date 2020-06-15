@@ -12,7 +12,7 @@ git clone https://github.com/internet-sicherheit/caliper-docker
 cd caliper-docker/caliper
 
 # Get access to the local update config store via
-sudo chown -R $USER:$(id -gn $USER) /home/lucas/.config
+sudo chown -R $USER:$(id -gn $USER) ~/.config
 
 # Install dependencies
 sudo npm install
