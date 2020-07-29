@@ -10,9 +10,29 @@ test:
   - label: open
     description: Test description for the opening of an account through the deployed chaincode
     txNumber:
+    - 1
+    - 10
+    - 100
     - 1000
-    - 1000
+    - 10000
+    - 100000
+    - 1000000
     rateControl:
+    - type: fixed-rate
+      opts:
+        tps: 150
+    - type: fixed-rate
+      opts:
+        tps: 150
+    - type: fixed-rate
+      opts:
+        tps: 150
+    - type: fixed-rate
+      opts:
+        tps: 150
+    - type: fixed-rate
+      opts:
+        tps: 150
     - type: fixed-rate
       opts:
         tps: 150
@@ -25,8 +45,32 @@ test:
   - label: query
     description: Test description for the query performance of the deployed chaincode
     txNumber:
+    - 1
+    - 10
+    - 100
     - 1000
+    - 10000
+    - 100000
+    - 1000000
     rateControl:
+    - type: fixed-rate
+      opts:
+        tps: 150
+    - type: fixed-rate
+      opts:
+        tps: 150
+    - type: fixed-rate
+      opts:
+        tps: 150
+    - type: fixed-rate
+      opts:
+        tps: 150
+    - type: fixed-rate
+      opts:
+        tps: 150
+    - type: fixed-rate
+      opts:
+        tps: 150
     - type: fixed-rate
       opts:
         tps: 150
