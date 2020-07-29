@@ -10,70 +10,54 @@ test:
   - label: open
     description: Test description for the opening of an account through the deployed chaincode
     txNumber:
-    - 1
-    - 10
-    - 100
     - 1000
-    - 10000
-    - 100000
-    - 1000000
+    - 2000
+    - 3000
+    - 4000
+    - 5000
     rateControl:
     - type: fixed-rate
       opts:
-        tps: 150
+        tps: 1000
     - type: fixed-rate
       opts:
-        tps: 150
+        tps: 1000
     - type: fixed-rate
       opts:
-        tps: 150
+        tps: 1000
     - type: fixed-rate
       opts:
-        tps: 150
+        tps: 1000
     - type: fixed-rate
       opts:
-        tps: 150
-    - type: fixed-rate
-      opts:
-        tps: 150
-    - type: fixed-rate
-      opts:
-        tps: 150
+        tps: 1000
     arguments:
       money: 10000
     callback: benchmark/simple/open.js
   - label: query
     description: Test description for the query performance of the deployed chaincode
     txNumber:
-    - 1
-    - 10
-    - 100
     - 1000
-    - 10000
-    - 100000
-    - 1000000
+    - 2000
+    - 3000
+    - 4000
+    - 5000
     rateControl:
     - type: fixed-rate
       opts:
-        tps: 150
+        tps: 1000
     - type: fixed-rate
       opts:
-        tps: 150
+        tps: 1000
     - type: fixed-rate
       opts:
-        tps: 150
+        tps: 1000
     - type: fixed-rate
       opts:
-        tps: 150
+        tps: 1000
     - type: fixed-rate
       opts:
-        tps: 150
-    - type: fixed-rate
-      opts:
-        tps: 150
-    - type: fixed-rate
-      opts:
-        tps: 150
+        tps: 1000
     callback: benchmark/simple/query.js
 monitor:
   type:

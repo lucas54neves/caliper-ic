@@ -1,0 +1,560 @@
+<!doctype html>
+<html>
+<head>
+    <title>Caliper Report</title>
+    <meta charset="UTF-8"/>
+    <style type="text/css">
+        .left-column {
+            position: fixed;
+            width:20%;
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -khtml-border-radius: 5px;
+        }
+        .right-column {
+            margin-left: 22%;
+            width:60%;
+        }
+        .left-column ul,h2 {
+            display: block;
+            margin: 10px;
+            padding: 0;
+            list-style: none;
+        }
+        .left-column ul{
+            border-top: 1px solid #d9d9d9;
+            font-size: 14px;
+        }
+        .left-column li{
+            margin-bottom: 5px;
+            color: #5e6b73;
+        }
+        .left-column h3 {
+            border-left: 5px solid #009a61;
+        }
+        .right-column>div {
+            border-top: 1px solid #d9d9d9;
+        }
+        .right-column table {
+            font-family: verdana,arial,sans-serif;
+            font-size:11px;
+            color:#333333;
+            border-width: 1px;
+            border-color: #666666;
+            border-collapse: collapse;
+            margin-bottom: 10px;
+        }
+        .right-column th {
+            border-width: 1px;
+            padding: 8px;
+            border-style: solid;
+            border-color: #666666;
+            background-color: #f2f2f2;
+        }
+        .right-column td {
+            border-width: 1px;
+            padding: 8px;
+            border-style: solid;
+            border-color: #666666;
+            background-color: #ffffff;
+        }
+        .tag {
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 5px 10px;
+            background-color: rgba(1,126,102,0.08);
+            font-family: verdana,arial,sans-serif;
+            font-size:11px;
+            color: #017E66;
+            text-align: center;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -khtml-border-radius: 5px;
+        }
+        pre {
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -khtml-border-radius: 5px;
+            overflow:auto;
+            max-height:300px;
+            font-size:12px;
+        }
+    </style>
+</head>
+<body>
+
+<main>
+    <div class="left-column">
+        <h2>Caliper Report</h2>
+        <ul>
+            <h3>&nbspBasic information</h3>
+            <li><strong>DLT: &nbsp</strong><span>burrow</span></li>
+            <li><strong>Benchmark: &nbsp</strong><span>simple</span></li>
+            <li><strong>Description: &nbsp</strong><span>This is an example benchmark for caliper, to test the backend DLT&#39;s performance with simple account opening &amp; querying transactions</span></li>
+            <li><strong>Test Rounds: &nbsp</strong><span>10</span></li>
+            <li><a href="#benchmarkInfo">Details</a></li>
+        </ul>
+        <ul>
+            <h3>&nbspBenchmark results</h3>
+            <li><a href="#benchmarksummary">Summary</a></li>
+                <li><a href="#open">open</a></li>
+                <li><a href="#query">query</a></li>
+        </ul>
+        <ul>
+            <h3>&nbspSystem Under Test</h3>
+            <li><strong>Version: &nbsp</strong><span>develop</span></li>
+            <li><strong>Size: &nbsp</strong><span>2 Peers</span></li>
+            <li><strong>Distribution: &nbsp</strong><span>Single Host</span></li>
+            <li><a href="#sutdetails">Details</a></li>
+        </ul>
+    </div>
+
+    <div class="right-column">
+        <div id="benchmarksummary">
+            <table>
+                <h3>Summary</h3>
+                <tr>
+                     <th>Test</th> <th>Name</th> <th>Succ</th> <th>Fail</th> <th>Send Rate</th> <th>Max Latency</th> <th>Min Latency</th> <th>Avg Latency</th> <th>Throughput</th>
+                </tr>
+
+                <tr>
+                     <td>1</td> <td>open</td> <td>1000</td> <td>0</td> <td>844.6 tps</td> <td>6.98 s</td> <td>2.94 s</td> <td>5.32 s</td> <td>125.8 tps</td>
+                </tr>
+                <tr>
+                     <td>2</td> <td>open</td> <td>2000</td> <td>0</td> <td>890.9 tps</td> <td>13.65 s</td> <td>2.55 s</td> <td>9.32 s</td> <td>131.1 tps</td>
+                </tr>
+                <tr>
+                     <td>3</td> <td>open</td> <td>3000</td> <td>0</td> <td>983.6 tps</td> <td>23.86 s</td> <td>5.88 s</td> <td>17.16 s</td> <td>114.8 tps</td>
+                </tr>
+                <tr>
+                     <td>4</td> <td>open</td> <td>4000</td> <td>0</td> <td>918.1 tps</td> <td>44.97 s</td> <td>11.19 s</td> <td>33.01 s</td> <td>87.4 tps</td>
+                </tr>
+                <tr>
+                     <td>5</td> <td>open</td> <td>5000</td> <td>0</td> <td>948.6 tps</td> <td>55.84 s</td> <td>20.41 s</td> <td>40.38 s</td> <td>87.3 tps</td>
+                </tr>
+                <tr>
+                     <td>6</td> <td>query</td> <td>1000</td> <td>0</td> <td>806.5 tps</td> <td>3.65 s</td> <td>0.00 s</td> <td>2.39 s</td> <td>228.3 tps</td>
+                </tr>
+                <tr>
+                     <td>7</td> <td>query</td> <td>2000</td> <td>0</td> <td>847.8 tps</td> <td>8.52 s</td> <td>0.01 s</td> <td>6.21 s</td> <td>220.4 tps</td>
+                </tr>
+                <tr>
+                     <td>8</td> <td>query</td> <td>3000</td> <td>0</td> <td>866.3 tps</td> <td>15.36 s</td> <td>0.01 s</td> <td>10.30 s</td> <td>191.6 tps</td>
+                </tr>
+                <tr>
+                     <td>9</td> <td>query</td> <td>4000</td> <td>0</td> <td>293.0 tps</td> <td>26.25 s</td> <td>0.01 s</td> <td>17.95 s</td> <td>139.9 tps</td>
+                </tr>
+                <tr>
+                     <td>10</td> <td>query</td> <td>5000</td> <td>0</td> <td>347.9 tps</td> <td>32.39 s</td> <td>0.01 s</td> <td>24.25 s</td> <td>139.8 tps</td>
+                </tr>
+            </table>
+        </div>
+        <div id="open">
+            <h3>open</h3>
+            <p>Test description for the opening of an account through the deployed chaincode</p>                
+                <h3>round 0</h3>
+                <strong class="tag">performance metrics</strong>
+                <table>
+                    <tr>
+                         <th>Name</th> <th>Succ</th> <th>Fail</th> <th>Send Rate</th> <th>Max Latency</th> <th>Min Latency</th> <th>Avg Latency</th> <th>Throughput</th>
+                    </tr>
+                    <tr>
+                         <td>open</td> <td>1000</td> <td>0</td> <td>844.6 tps</td> <td>6.98 s</td> <td>2.94 s</td> <td>5.32 s</td> <td>125.8 tps</td>
+                    </tr>
+                </table>
+                <strong class="tag">resource consumption</strong>
+                <table>
+                    <tr>
+                         <th>TYPE</th> <th>NAME</th> <th>Memory(max)</th> <th>Memory(avg)</th> <th>CPU(max)</th> <th>CPU(avg)</th> <th>Traffic In</th> <th>Traffic Out</th> <th>Disc Read</th> <th>Disc Write</th>
+                    </tr>
+                    <tr>
+                         <td>Process</td> <td>node local-client.js(avg)</td> <td>72.0MB</td> <td>67.2MB</td> <td>39.63%</td> <td>12.49%</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td>
+                    </tr>
+                    <tr>
+                         <td>Docker</td> <td>burrow_1</td> <td>95.2MB</td> <td>55.2MB</td> <td>123.11%</td> <td>37.52%</td> <td>0B</td> <td>-</td> <td>0B</td> <td>2.8MB</td>
+                    </tr>
+                    <tr>
+                         <td>Docker</td> <td>burrow_0</td> <td>529.4MB</td> <td>246.6MB</td> <td>131.68%</td> <td>76.07%</td> <td>0B</td> <td>-</td> <td>168.0KB</td> <td>2.8MB</td>
+                    </tr>
+                    <tr>
+                         <td>Docker</td> <td>stupefied_mendeleev</td> <td>0B</td> <td>0B</td> <td>0.00%</td> <td>0.00%</td> <td>0B</td> <td>-</td> <td>0B</td> <td>0B</td>
+                    </tr>
+                </table>
+                <h3>round 1</h3>
+                <strong class="tag">performance metrics</strong>
+                <table>
+                    <tr>
+                         <th>Name</th> <th>Succ</th> <th>Fail</th> <th>Send Rate</th> <th>Max Latency</th> <th>Min Latency</th> <th>Avg Latency</th> <th>Throughput</th>
+                    </tr>
+                    <tr>
+                         <td>open</td> <td>2000</td> <td>0</td> <td>890.9 tps</td> <td>13.65 s</td> <td>2.55 s</td> <td>9.32 s</td> <td>131.1 tps</td>
+                    </tr>
+                </table>
+                <strong class="tag">resource consumption</strong>
+                <table>
+                    <tr>
+                         <th>TYPE</th> <th>NAME</th> <th>Memory(max)</th> <th>Memory(avg)</th> <th>CPU(max)</th> <th>CPU(avg)</th> <th>Traffic In</th> <th>Traffic Out</th> <th>Disc Read</th> <th>Disc Write</th>
+                    </tr>
+                    <tr>
+                         <td>Process</td> <td>node local-client.js(avg)</td> <td>90.0MB</td> <td>85.2MB</td> <td>36.98%</td> <td>7.78%</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td>
+                    </tr>
+                    <tr>
+                         <td>Docker</td> <td>burrow_1</td> <td>104.1MB</td> <td>99.5MB</td> <td>111.91%</td> <td>52.71%</td> <td>0B</td> <td>-</td> <td>0B</td> <td>5.0MB</td>
+                    </tr>
+                    <tr>
+                         <td>Docker</td> <td>burrow_0</td> <td>954.8MB</td> <td>653.0MB</td> <td>163.39%</td> <td>101.07%</td> <td>0B</td> <td>-</td> <td>0B</td> <td>5.2MB</td>
+                    </tr>
+                    <tr>
+                         <td>Docker</td> <td>stupefied_mendeleev</td> <td>0B</td> <td>0B</td> <td>0.00%</td> <td>0.00%</td> <td>0B</td> <td>-</td> <td>0B</td> <td>0B</td>
+                    </tr>
+                </table>
+                <h3>round 2</h3>
+                <strong class="tag">performance metrics</strong>
+                <table>
+                    <tr>
+                         <th>Name</th> <th>Succ</th> <th>Fail</th> <th>Send Rate</th> <th>Max Latency</th> <th>Min Latency</th> <th>Avg Latency</th> <th>Throughput</th>
+                    </tr>
+                    <tr>
+                         <td>open</td> <td>3000</td> <td>0</td> <td>983.6 tps</td> <td>23.86 s</td> <td>5.88 s</td> <td>17.16 s</td> <td>114.8 tps</td>
+                    </tr>
+                </table>
+                <strong class="tag">resource consumption</strong>
+                <table>
+                    <tr>
+                         <th>TYPE</th> <th>NAME</th> <th>Memory(max)</th> <th>Memory(avg)</th> <th>CPU(max)</th> <th>CPU(avg)</th> <th>Traffic In</th> <th>Traffic Out</th> <th>Disc Read</th> <th>Disc Write</th>
+                    </tr>
+                    <tr>
+                         <td>Process</td> <td>node local-client.js(avg)</td> <td>104.8MB</td> <td>102.2MB</td> <td>25.78%</td> <td>5.17%</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td>
+                    </tr>
+                    <tr>
+                         <td>Docker</td> <td>burrow_1</td> <td>155.5MB</td> <td>132.1MB</td> <td>156.17%</td> <td>58.06%</td> <td>0B</td> <td>-</td> <td>732.0KB</td> <td>7.1MB</td>
+                    </tr>
+                    <tr>
+                         <td>Docker</td> <td>burrow_0</td> <td>1.5GB</td> <td>1.1GB</td> <td>303.05%</td> <td>145.09%</td> <td>0B</td> <td>-</td> <td>6.8MB</td> <td>11.7MB</td>
+                    </tr>
+                    <tr>
+                         <td>Docker</td> <td>stupefied_mendeleev</td> <td>0B</td> <td>0B</td> <td>0.00%</td> <td>0.00%</td> <td>0B</td> <td>-</td> <td>0B</td> <td>0B</td>
+                    </tr>
+                </table>
+                <h3>round 3</h3>
+                <strong class="tag">performance metrics</strong>
+                <table>
+                    <tr>
+                         <th>Name</th> <th>Succ</th> <th>Fail</th> <th>Send Rate</th> <th>Max Latency</th> <th>Min Latency</th> <th>Avg Latency</th> <th>Throughput</th>
+                    </tr>
+                    <tr>
+                         <td>open</td> <td>4000</td> <td>0</td> <td>918.1 tps</td> <td>44.97 s</td> <td>11.19 s</td> <td>33.01 s</td> <td>87.4 tps</td>
+                    </tr>
+                </table>
+                <strong class="tag">resource consumption</strong>
+                <table>
+                    <tr>
+                         <th>TYPE</th> <th>NAME</th> <th>Memory(max)</th> <th>Memory(avg)</th> <th>CPU(max)</th> <th>CPU(avg)</th> <th>Traffic In</th> <th>Traffic Out</th> <th>Disc Read</th> <th>Disc Write</th>
+                    </tr>
+                    <tr>
+                         <td>Process</td> <td>node local-client.js(avg)</td> <td>107.4MB</td> <td>100.2MB</td> <td>29.01%</td> <td>3.61%</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td>
+                    </tr>
+                    <tr>
+                         <td>Docker</td> <td>burrow_1</td> <td>205.6MB</td> <td>179.3MB</td> <td>176.64%</td> <td>44.42%</td> <td>0B</td> <td>-</td> <td>3.6MB</td> <td>9.1MB</td>
+                    </tr>
+                    <tr>
+                         <td>Docker</td> <td>burrow_0</td> <td>2.9GB</td> <td>2.0GB</td> <td>354.10%</td> <td>142.34%</td> <td>0B</td> <td>-</td> <td>8.7MB</td> <td>9.5MB</td>
+                    </tr>
+                    <tr>
+                         <td>Docker</td> <td>stupefied_mendeleev</td> <td>0B</td> <td>0B</td> <td>0.00%</td> <td>0.00%</td> <td>0B</td> <td>-</td> <td>0B</td> <td>0B</td>
+                    </tr>
+                </table>
+                <h3>round 4</h3>
+                <strong class="tag">performance metrics</strong>
+                <table>
+                    <tr>
+                         <th>Name</th> <th>Succ</th> <th>Fail</th> <th>Send Rate</th> <th>Max Latency</th> <th>Min Latency</th> <th>Avg Latency</th> <th>Throughput</th>
+                    </tr>
+                    <tr>
+                         <td>open</td> <td>5000</td> <td>0</td> <td>948.6 tps</td> <td>55.84 s</td> <td>20.41 s</td> <td>40.38 s</td> <td>87.3 tps</td>
+                    </tr>
+                </table>
+                <strong class="tag">resource consumption</strong>
+                <table>
+                    <tr>
+                         <th>TYPE</th> <th>NAME</th> <th>Memory(max)</th> <th>Memory(avg)</th> <th>CPU(max)</th> <th>CPU(avg)</th> <th>Traffic In</th> <th>Traffic Out</th> <th>Disc Read</th> <th>Disc Write</th>
+                    </tr>
+                    <tr>
+                         <td>Process</td> <td>node local-client.js(avg)</td> <td>96.2MB</td> <td>87.9MB</td> <td>34.05%</td> <td>4.09%</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td>
+                    </tr>
+                    <tr>
+                         <td>Docker</td> <td>burrow_1</td> <td>237.3MB</td> <td>214.6MB</td> <td>152.50%</td> <td>61.03%</td> <td>0B</td> <td>-</td> <td>3.1MB</td> <td>16.9MB</td>
+                    </tr>
+                    <tr>
+                         <td>Docker</td> <td>burrow_0</td> <td>2.9GB</td> <td>2.9GB</td> <td>373.66%</td> <td>172.81%</td> <td>0B</td> <td>-</td> <td>3.6MB</td> <td>15.1MB</td>
+                    </tr>
+                    <tr>
+                         <td>Docker</td> <td>stupefied_mendeleev</td> <td>0B</td> <td>0B</td> <td>0.00%</td> <td>0.00%</td> <td>0B</td> <td>-</td> <td>0B</td> <td>0B</td>
+                    </tr>
+                </table>
+        </div>
+        <div id="query">
+            <h3>query</h3>
+            <p>Test description for the query performance of the deployed chaincode</p>                
+                <h3>round 0</h3>
+                <strong class="tag">performance metrics</strong>
+                <table>
+                    <tr>
+                         <th>Name</th> <th>Succ</th> <th>Fail</th> <th>Send Rate</th> <th>Max Latency</th> <th>Min Latency</th> <th>Avg Latency</th> <th>Throughput</th>
+                    </tr>
+                    <tr>
+                         <td>query</td> <td>1000</td> <td>0</td> <td>806.5 tps</td> <td>3.65 s</td> <td>0.00 s</td> <td>2.39 s</td> <td>228.3 tps</td>
+                    </tr>
+                </table>
+                <strong class="tag">resource consumption</strong>
+                <table>
+                    <tr>
+                         <th>TYPE</th> <th>NAME</th> <th>Memory(max)</th> <th>Memory(avg)</th> <th>CPU(max)</th> <th>CPU(avg)</th> <th>Traffic In</th> <th>Traffic Out</th> <th>Disc Read</th> <th>Disc Write</th>
+                    </tr>
+                    <tr>
+                         <td>Process</td> <td>node local-client.js(avg)</td> <td>81.2MB</td> <td>81.0MB</td> <td>37.39%</td> <td>11.94%</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td>
+                    </tr>
+                    <tr>
+                         <td>Docker</td> <td>burrow_1</td> <td>237.3MB</td> <td>237.3MB</td> <td>3.10%</td> <td>2.87%</td> <td>0B</td> <td>-</td> <td>0B</td> <td>0B</td>
+                    </tr>
+                    <tr>
+                         <td>Docker</td> <td>burrow_0</td> <td>2.9GB</td> <td>2.9GB</td> <td>238.57%</td> <td>192.47%</td> <td>0B</td> <td>-</td> <td>0B</td> <td>0B</td>
+                    </tr>
+                    <tr>
+                         <td>Docker</td> <td>stupefied_mendeleev</td> <td>0B</td> <td>0B</td> <td>0.00%</td> <td>0.00%</td> <td>0B</td> <td>-</td> <td>0B</td> <td>0B</td>
+                    </tr>
+                </table>
+                <h3>round 1</h3>
+                <strong class="tag">performance metrics</strong>
+                <table>
+                    <tr>
+                         <th>Name</th> <th>Succ</th> <th>Fail</th> <th>Send Rate</th> <th>Max Latency</th> <th>Min Latency</th> <th>Avg Latency</th> <th>Throughput</th>
+                    </tr>
+                    <tr>
+                         <td>query</td> <td>2000</td> <td>0</td> <td>847.8 tps</td> <td>8.52 s</td> <td>0.01 s</td> <td>6.21 s</td> <td>220.4 tps</td>
+                    </tr>
+                </table>
+                <strong class="tag">resource consumption</strong>
+                <table>
+                    <tr>
+                         <th>TYPE</th> <th>NAME</th> <th>Memory(max)</th> <th>Memory(avg)</th> <th>CPU(max)</th> <th>CPU(avg)</th> <th>Traffic In</th> <th>Traffic Out</th> <th>Disc Read</th> <th>Disc Write</th>
+                    </tr>
+                    <tr>
+                         <td>Process</td> <td>node local-client.js(avg)</td> <td>81.2MB</td> <td>80.7MB</td> <td>23.74%</td> <td>6.41%</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td>
+                    </tr>
+                    <tr>
+                         <td>Docker</td> <td>burrow_1</td> <td>237.3MB</td> <td>237.3MB</td> <td>3.57%</td> <td>2.00%</td> <td>0B</td> <td>-</td> <td>0B</td> <td>4.0KB</td>
+                    </tr>
+                    <tr>
+                         <td>Docker</td> <td>burrow_0</td> <td>2.9GB</td> <td>2.9GB</td> <td>365.50%</td> <td>248.69%</td> <td>0B</td> <td>-</td> <td>8.0KB</td> <td>0B</td>
+                    </tr>
+                    <tr>
+                         <td>Docker</td> <td>stupefied_mendeleev</td> <td>0B</td> <td>0B</td> <td>0.00%</td> <td>0.00%</td> <td>0B</td> <td>-</td> <td>0B</td> <td>0B</td>
+                    </tr>
+                </table>
+                <h3>round 2</h3>
+                <strong class="tag">performance metrics</strong>
+                <table>
+                    <tr>
+                         <th>Name</th> <th>Succ</th> <th>Fail</th> <th>Send Rate</th> <th>Max Latency</th> <th>Min Latency</th> <th>Avg Latency</th> <th>Throughput</th>
+                    </tr>
+                    <tr>
+                         <td>query</td> <td>3000</td> <td>0</td> <td>866.3 tps</td> <td>15.36 s</td> <td>0.01 s</td> <td>10.30 s</td> <td>191.6 tps</td>
+                    </tr>
+                </table>
+                <strong class="tag">resource consumption</strong>
+                <table>
+                    <tr>
+                         <th>TYPE</th> <th>NAME</th> <th>Memory(max)</th> <th>Memory(avg)</th> <th>CPU(max)</th> <th>CPU(avg)</th> <th>Traffic In</th> <th>Traffic Out</th> <th>Disc Read</th> <th>Disc Write</th>
+                    </tr>
+                    <tr>
+                         <td>Process</td> <td>node local-client.js(avg)</td> <td>87.4MB</td> <td>82.5MB</td> <td>23.45%</td> <td>5.42%</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td>
+                    </tr>
+                    <tr>
+                         <td>Docker</td> <td>burrow_1</td> <td>237.5MB</td> <td>236.8MB</td> <td>6.23%</td> <td>2.12%</td> <td>0B</td> <td>-</td> <td>0B</td> <td>4.0KB</td>
+                    </tr>
+                    <tr>
+                         <td>Docker</td> <td>burrow_0</td> <td>2.9GB</td> <td>2.9GB</td> <td>359.53%</td> <td>231.99%</td> <td>0B</td> <td>-</td> <td>16.0KB</td> <td>0B</td>
+                    </tr>
+                    <tr>
+                         <td>Docker</td> <td>stupefied_mendeleev</td> <td>0B</td> <td>0B</td> <td>0.00%</td> <td>0.00%</td> <td>0B</td> <td>-</td> <td>0B</td> <td>0B</td>
+                    </tr>
+                </table>
+                <h3>round 3</h3>
+                <strong class="tag">performance metrics</strong>
+                <table>
+                    <tr>
+                         <th>Name</th> <th>Succ</th> <th>Fail</th> <th>Send Rate</th> <th>Max Latency</th> <th>Min Latency</th> <th>Avg Latency</th> <th>Throughput</th>
+                    </tr>
+                    <tr>
+                         <td>query</td> <td>4000</td> <td>0</td> <td>293.0 tps</td> <td>26.25 s</td> <td>0.01 s</td> <td>17.95 s</td> <td>139.9 tps</td>
+                    </tr>
+                </table>
+                <strong class="tag">resource consumption</strong>
+                <table>
+                    <tr>
+                         <th>TYPE</th> <th>NAME</th> <th>Memory(max)</th> <th>Memory(avg)</th> <th>CPU(max)</th> <th>CPU(avg)</th> <th>Traffic In</th> <th>Traffic Out</th> <th>Disc Read</th> <th>Disc Write</th>
+                    </tr>
+                    <tr>
+                         <td>Process</td> <td>node local-client.js(avg)</td> <td>68.5MB</td> <td>64.4MB</td> <td>32.23%</td> <td>4.53%</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td>
+                    </tr>
+                    <tr>
+                         <td>Docker</td> <td>burrow_1</td> <td>229.6MB</td> <td>228.1MB</td> <td>2.34%</td> <td>1.49%</td> <td>0B</td> <td>-</td> <td>72.0KB</td> <td>8.0KB</td>
+                    </tr>
+                    <tr>
+                         <td>Docker</td> <td>burrow_0</td> <td>3.1GB</td> <td>2.9GB</td> <td>311.95%</td> <td>221.50%</td> <td>0B</td> <td>-</td> <td>656.0KB</td> <td>4.0KB</td>
+                    </tr>
+                    <tr>
+                         <td>Docker</td> <td>stupefied_mendeleev</td> <td>0B</td> <td>0B</td> <td>0.00%</td> <td>0.00%</td> <td>0B</td> <td>-</td> <td>0B</td> <td>0B</td>
+                    </tr>
+                </table>
+                <h3>round 4</h3>
+                <strong class="tag">performance metrics</strong>
+                <table>
+                    <tr>
+                         <th>Name</th> <th>Succ</th> <th>Fail</th> <th>Send Rate</th> <th>Max Latency</th> <th>Min Latency</th> <th>Avg Latency</th> <th>Throughput</th>
+                    </tr>
+                    <tr>
+                         <td>query</td> <td>5000</td> <td>0</td> <td>347.9 tps</td> <td>32.39 s</td> <td>0.01 s</td> <td>24.25 s</td> <td>139.8 tps</td>
+                    </tr>
+                </table>
+                <strong class="tag">resource consumption</strong>
+                <table>
+                    <tr>
+                         <th>TYPE</th> <th>NAME</th> <th>Memory(max)</th> <th>Memory(avg)</th> <th>CPU(max)</th> <th>CPU(avg)</th> <th>Traffic In</th> <th>Traffic Out</th> <th>Disc Read</th> <th>Disc Write</th>
+                    </tr>
+                    <tr>
+                         <td>Process</td> <td>node local-client.js(avg)</td> <td>67.9MB</td> <td>64.0MB</td> <td>23.64%</td> <td>3.79%</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td>
+                    </tr>
+                    <tr>
+                         <td>Docker</td> <td>burrow_1</td> <td>227.7MB</td> <td>225.5MB</td> <td>6.21%</td> <td>1.78%</td> <td>0B</td> <td>-</td> <td>1.8MB</td> <td>64.0KB</td>
+                    </tr>
+                    <tr>
+                         <td>Docker</td> <td>burrow_0</td> <td>3.6GB</td> <td>3.3GB</td> <td>339.48%</td> <td>220.77%</td> <td>0B</td> <td>-</td> <td>6.8MB</td> <td>64.0KB</td>
+                    </tr>
+                    <tr>
+                         <td>Docker</td> <td>stupefied_mendeleev</td> <td>0B</td> <td>0B</td> <td>0.00%</td> <td>0.00%</td> <td>0B</td> <td>-</td> <td>0B</td> <td>0B</td>
+                    </tr>
+                </table>
+        </div>
+        <div>
+            <h3>Test Environment</h3>
+            <strong class="tag">benchmark config</strong>
+            <pre id="benchmarkInfo">{
+  &quot;name&quot;: &quot;simple&quot;,
+  &quot;description&quot;: &quot;This is an example benchmark for caliper, to test the backend DLT&#39;s performance with simple account opening &amp; querying transactions&quot;,
+  &quot;clients&quot;: {
+    &quot;type&quot;: &quot;local&quot;,
+    &quot;number&quot;: 5
+  },
+  &quot;rounds&quot;: [
+    {
+      &quot;label&quot;: &quot;open&quot;,
+      &quot;description&quot;: &quot;Test description for the opening of an account through the deployed chaincode&quot;,
+      &quot;txNumber&quot;: [
+        1000,
+        2000,
+        3000,
+        4000,
+        5000
+      ],
+      &quot;rateControl&quot;: [
+        {
+          &quot;type&quot;: &quot;fixed-rate&quot;,
+          &quot;opts&quot;: {
+            &quot;tps&quot;: 1000
+          }
+        },
+        {
+          &quot;type&quot;: &quot;fixed-rate&quot;,
+          &quot;opts&quot;: {
+            &quot;tps&quot;: 1000
+          }
+        },
+        {
+          &quot;type&quot;: &quot;fixed-rate&quot;,
+          &quot;opts&quot;: {
+            &quot;tps&quot;: 1000
+          }
+        },
+        {
+          &quot;type&quot;: &quot;fixed-rate&quot;,
+          &quot;opts&quot;: {
+            &quot;tps&quot;: 1000
+          }
+        },
+        {
+          &quot;type&quot;: &quot;fixed-rate&quot;,
+          &quot;opts&quot;: {
+            &quot;tps&quot;: 1000
+          }
+        }
+      ],
+      &quot;arguments&quot;: {
+        &quot;money&quot;: 10000
+      },
+      &quot;callback&quot;: &quot;benchmark&#x2F;simple&#x2F;open.js&quot;
+    },
+    {
+      &quot;label&quot;: &quot;query&quot;,
+      &quot;description&quot;: &quot;Test description for the query performance of the deployed chaincode&quot;,
+      &quot;txNumber&quot;: [
+        1000,
+        2000,
+        3000,
+        4000,
+        5000
+      ],
+      &quot;rateControl&quot;: [
+        {
+          &quot;type&quot;: &quot;fixed-rate&quot;,
+          &quot;opts&quot;: {
+            &quot;tps&quot;: 1000
+          }
+        },
+        {
+          &quot;type&quot;: &quot;fixed-rate&quot;,
+          &quot;opts&quot;: {
+            &quot;tps&quot;: 1000
+          }
+        },
+        {
+          &quot;type&quot;: &quot;fixed-rate&quot;,
+          &quot;opts&quot;: {
+            &quot;tps&quot;: 1000
+          }
+        },
+        {
+          &quot;type&quot;: &quot;fixed-rate&quot;,
+          &quot;opts&quot;: {
+            &quot;tps&quot;: 1000
+          }
+        },
+        {
+          &quot;type&quot;: &quot;fixed-rate&quot;,
+          &quot;opts&quot;: {
+            &quot;tps&quot;: 1000
+          }
+        }
+      ],
+      &quot;callback&quot;: &quot;benchmark&#x2F;simple&#x2F;query.js&quot;
+    }
+  ]
+}</pre>
+            <strong class="tag">SUT</strong>
+            <pre id="sutdetails">not provided</pre>
+        </div>
+    </div>
+
+
+</main>
+
+</body>
+</html>

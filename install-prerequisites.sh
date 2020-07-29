@@ -34,6 +34,8 @@ sudo chmod +x /usr/local/bin/docker-compose
 sudo groupadd docker
 ## Add your user to the docker group.
 sudo usermod -aG docker $USER
+## Activate the changes to groups
+newgrp docker
 
 # Configure Docker to start on boot
 sudo systemctl enable docker
