@@ -37,3 +37,8 @@ sudo usermod -aG docker $USER
 
 # Configure Docker to start on boot
 sudo systemctl enable docker
+
+# Change the node version
+sudo npm cache clean -f
+sudo npm install -g n
+sudo n 8.9.0
