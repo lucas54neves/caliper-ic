@@ -4,7 +4,7 @@ cd ../caliper
 
 npm run fabric-v1.1-deps
 
-sudo npm run bench -- -c benchmark/simple/config.yaml -n network/fabric-v1.1/dev/fabric-node.json
+sudo npm run bench -- -c benchmark/simple/config-benchmark.yaml -n network/fabric-v1.1/dev/fabric-node.json
 
 for file in report*.html
 do

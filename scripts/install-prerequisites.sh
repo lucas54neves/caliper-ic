@@ -3,25 +3,29 @@
 sudo apt update && sudo apt upgrade -y
 
 # Install necessary programs
-sudo apt install -y apt-transport-https ca-certificates curl gnupg-agent software-properties-common
+sudo apt install -y apt-transport-https ca-certificates curl gnupg-agent software-properties-common g++
 
-# Install Node 14
-curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+# Install Node 12 and change to 8.9.0
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 sudo apt update && sudo apt install -y nodejs
+sudo npm cache clean -f
+sudo npm install -g n
+sudo n 8.9.0
 
-# Install Yarn
-curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-sudo apt update && sudo apt install -y yarn
+# Install node-gyp
+npm install -g
 
 # Install Docker
 ## Unistall old versions
-sudo apt remove docker docker-engine docker.io containerd runc
+sudo apt remove docker docker.io containerd runc
 ## Set up the repository
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"
 ## Install Docker Engine
 sudo apt update && sudo apt install -y docker-ce docker-ce-cli containerd.io
+
+# Configure Docker to start on boot
+sudo systemctl enable docker
 
 # Install Docker-compose
 ## Run this command to download the current stable release of Docker Compose
@@ -36,11 +40,3 @@ sudo groupadd docker
 sudo usermod -aG docker $USER
 ## Activate the changes to groups
 newgrp docker
-
-# Configure Docker to start on boot
-sudo systemctl enable docker
-
-# Change the node version
-sudo npm cache clean -f
-sudo npm install -g n
-sudo n 8.9.0
