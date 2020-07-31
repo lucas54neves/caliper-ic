@@ -4,7 +4,7 @@ cd ../caliper
 
 npm run burrow-deps
 
-sudo npm run bench -- -c benchmark/simple/config-benchmark.yaml -n network/burrow/simple/burrow.json
+sudo npm run bench -- -c benchmark/simple/config-benchmark2.yaml -n network/burrow/simple/burrow.json
 
 for file in report*.html
 do
