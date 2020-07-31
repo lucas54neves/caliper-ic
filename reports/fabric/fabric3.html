@@ -95,7 +95,7 @@
         <h2>Caliper Report</h2>
         <ul>
             <h3>&nbspBasic information</h3>
-            <li><strong>DLT: &nbsp</strong><span>burrow</span></li>
+            <li><strong>DLT: &nbsp</strong><span>fabric</span></li>
             <li><strong>Benchmark: &nbsp</strong><span>simple</span></li>
             <li><strong>Description: &nbsp</strong><span>This is an example benchmark for caliper, to test the backend DLT&#39;s performance with simple account opening &amp; querying transactions</span></li>
             <li><strong>Test Rounds: &nbsp</strong><span>10</span></li>
@@ -109,8 +109,9 @@
         </ul>
         <ul>
             <h3>&nbspSystem Under Test</h3>
-            <li><strong>Version: &nbsp</strong><span>develop</span></li>
-            <li><strong>Size: &nbsp</strong><span>2 Peers</span></li>
+            <li><strong>Version: &nbsp</strong><span>1.1.0</span></li>
+            <li><strong>Size: &nbsp</strong><span>1 Org with 1 Peer</span></li>
+            <li><strong>Orderer: &nbsp</strong><span>Solo</span></li>
             <li><strong>Distribution: &nbsp</strong><span>Single Host</span></li>
             <li><a href="#sutdetails">Details</a></li>
         </ul>
@@ -125,34 +126,34 @@
                 </tr>
 
                 <tr>
-                     <td>1</td> <td>open</td> <td>1000</td> <td>0</td> <td>844.6 tps</td> <td>6.98 s</td> <td>2.94 s</td> <td>5.32 s</td> <td>125.8 tps</td>
+                     <td>1</td> <td>open</td> <td>1000</td> <td>0</td> <td>347.7 tps</td> <td>45.80 s</td> <td>5.89 s</td> <td>27.21 s</td> <td>21.4 tps</td>
                 </tr>
                 <tr>
-                     <td>2</td> <td>open</td> <td>2000</td> <td>0</td> <td>890.9 tps</td> <td>13.65 s</td> <td>2.55 s</td> <td>9.32 s</td> <td>131.1 tps</td>
+                     <td>2</td> <td>open</td> <td>1000</td> <td>0</td> <td>384.5 tps</td> <td>48.10 s</td> <td>2.07 s</td> <td>28.49 s</td> <td>20.5 tps</td>
                 </tr>
                 <tr>
-                     <td>3</td> <td>open</td> <td>3000</td> <td>0</td> <td>983.6 tps</td> <td>23.86 s</td> <td>5.88 s</td> <td>17.16 s</td> <td>114.8 tps</td>
+                     <td>3</td> <td>open</td> <td>1000</td> <td>0</td> <td>356.8 tps</td> <td>47.77 s</td> <td>2.64 s</td> <td>28.58 s</td> <td>20.2 tps</td>
                 </tr>
                 <tr>
-                     <td>4</td> <td>open</td> <td>4000</td> <td>0</td> <td>918.1 tps</td> <td>44.97 s</td> <td>11.19 s</td> <td>33.01 s</td> <td>87.4 tps</td>
+                     <td>4</td> <td>open</td> <td>1000</td> <td>0</td> <td>410.0 tps</td> <td>49.27 s</td> <td>2.00 s</td> <td>29.54 s</td> <td>20.1 tps</td>
                 </tr>
                 <tr>
-                     <td>5</td> <td>open</td> <td>5000</td> <td>0</td> <td>948.6 tps</td> <td>55.84 s</td> <td>20.41 s</td> <td>40.38 s</td> <td>87.3 tps</td>
+                     <td>5</td> <td>open</td> <td>1000</td> <td>0</td> <td>368.5 tps</td> <td>50.48 s</td> <td>2.36 s</td> <td>30.54 s</td> <td>19.8 tps</td>
                 </tr>
                 <tr>
-                     <td>6</td> <td>query</td> <td>1000</td> <td>0</td> <td>806.5 tps</td> <td>3.65 s</td> <td>0.00 s</td> <td>2.39 s</td> <td>228.3 tps</td>
+                     <td>6</td> <td>query</td> <td>1000</td> <td>0</td> <td>436.3 tps</td> <td>2.57 s</td> <td>0.57 s</td> <td>1.69 s</td> <td>315.5 tps</td>
                 </tr>
                 <tr>
-                     <td>7</td> <td>query</td> <td>2000</td> <td>0</td> <td>847.8 tps</td> <td>8.52 s</td> <td>0.01 s</td> <td>6.21 s</td> <td>220.4 tps</td>
+                     <td>7</td> <td>query</td> <td>1000</td> <td>0</td> <td>402.7 tps</td> <td>2.50 s</td> <td>0.03 s</td> <td>1.62 s</td> <td>307.7 tps</td>
                 </tr>
                 <tr>
-                     <td>8</td> <td>query</td> <td>3000</td> <td>0</td> <td>866.3 tps</td> <td>15.36 s</td> <td>0.01 s</td> <td>10.30 s</td> <td>191.6 tps</td>
+                     <td>8</td> <td>query</td> <td>1000</td> <td>0</td> <td>411.0 tps</td> <td>2.62 s</td> <td>0.41 s</td> <td>1.70 s</td> <td>319.5 tps</td>
                 </tr>
                 <tr>
-                     <td>9</td> <td>query</td> <td>4000</td> <td>0</td> <td>293.0 tps</td> <td>26.25 s</td> <td>0.01 s</td> <td>17.95 s</td> <td>139.9 tps</td>
+                     <td>9</td> <td>query</td> <td>1000</td> <td>0</td> <td>483.1 tps</td> <td>2.92 s</td> <td>0.71 s</td> <td>1.74 s</td> <td>310.5 tps</td>
                 </tr>
                 <tr>
-                     <td>10</td> <td>query</td> <td>5000</td> <td>0</td> <td>347.9 tps</td> <td>32.39 s</td> <td>0.01 s</td> <td>24.25 s</td> <td>139.8 tps</td>
+                     <td>10</td> <td>query</td> <td>1000</td> <td>0</td> <td>405.5 tps</td> <td>2.41 s</td> <td>0.27 s</td> <td>1.55 s</td> <td>326.7 tps</td>
                 </tr>
             </table>
         </div>
@@ -166,7 +167,7 @@
                          <th>Name</th> <th>Succ</th> <th>Fail</th> <th>Send Rate</th> <th>Max Latency</th> <th>Min Latency</th> <th>Avg Latency</th> <th>Throughput</th>
                     </tr>
                     <tr>
-                         <td>open</td> <td>1000</td> <td>0</td> <td>844.6 tps</td> <td>6.98 s</td> <td>2.94 s</td> <td>5.32 s</td> <td>125.8 tps</td>
+                         <td>open</td> <td>1000</td> <td>0</td> <td>347.7 tps</td> <td>45.80 s</td> <td>5.89 s</td> <td>27.21 s</td> <td>21.4 tps</td>
                     </tr>
                 </table>
                 <strong class="tag">resource consumption</strong>
@@ -175,16 +176,22 @@
                          <th>TYPE</th> <th>NAME</th> <th>Memory(max)</th> <th>Memory(avg)</th> <th>CPU(max)</th> <th>CPU(avg)</th> <th>Traffic In</th> <th>Traffic Out</th> <th>Disc Read</th> <th>Disc Write</th>
                     </tr>
                     <tr>
-                         <td>Process</td> <td>node local-client.js(avg)</td> <td>72.0MB</td> <td>67.2MB</td> <td>39.63%</td> <td>12.49%</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td>
+                         <td>Process</td> <td>node local-client.js(avg)</td> <td>106.7MB</td> <td>93.7MB</td> <td>72.43%</td> <td>8.99%</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td>
                     </tr>
                     <tr>
-                         <td>Docker</td> <td>burrow_1</td> <td>95.2MB</td> <td>55.2MB</td> <td>123.11%</td> <td>37.52%</td> <td>0B</td> <td>-</td> <td>0B</td> <td>2.8MB</td>
+                         <td>Docker</td> <td>dev-peer0.org1.example.co...le-v0</td> <td>77.1MB</td> <td>70.3MB</td> <td>90.67%</td> <td>4.19%</td> <td>1.6MB</td> <td>595.5KB</td> <td>0B</td> <td>0B</td>
                     </tr>
                     <tr>
-                         <td>Docker</td> <td>burrow_0</td> <td>529.4MB</td> <td>246.6MB</td> <td>131.68%</td> <td>76.07%</td> <td>0B</td> <td>-</td> <td>168.0KB</td> <td>2.8MB</td>
+                         <td>Docker</td> <td>dev-peer0.org1.example.co...es-v1</td> <td>46.7MB</td> <td>46.7MB</td> <td>0.09%</td> <td>0.01%</td> <td>149B</td> <td>149B</td> <td>0B</td> <td>0B</td>
                     </tr>
                     <tr>
-                         <td>Docker</td> <td>stupefied_mendeleev</td> <td>0B</td> <td>0B</td> <td>0.00%</td> <td>0.00%</td> <td>0B</td> <td>-</td> <td>0B</td> <td>0B</td>
+                         <td>Docker</td> <td>peer0.org1.example.com</td> <td>236.3MB</td> <td>226.9MB</td> <td>88.46%</td> <td>19.50%</td> <td>5.0MB</td> <td>13.7MB</td> <td>0B</td> <td>5.6MB</td>
+                    </tr>
+                    <tr>
+                         <td>Docker</td> <td>orderer.example.com</td> <td>44.7MB</td> <td>38.5MB</td> <td>68.19%</td> <td>9.19%</td> <td>3.1MB</td> <td>3.3MB</td> <td>0B</td> <td>3.8MB</td>
+                    </tr>
+                    <tr>
+                         <td>Docker</td> <td>ca.org1.example.com</td> <td>6.9MB</td> <td>6.9MB</td> <td>0.01%</td> <td>0.00%</td> <td>0B</td> <td>0B</td> <td>0B</td> <td>0B</td>
                     </tr>
                 </table>
                 <h3>round 1</h3>
@@ -194,7 +201,7 @@
                          <th>Name</th> <th>Succ</th> <th>Fail</th> <th>Send Rate</th> <th>Max Latency</th> <th>Min Latency</th> <th>Avg Latency</th> <th>Throughput</th>
                     </tr>
                     <tr>
-                         <td>open</td> <td>2000</td> <td>0</td> <td>890.9 tps</td> <td>13.65 s</td> <td>2.55 s</td> <td>9.32 s</td> <td>131.1 tps</td>
+                         <td>open</td> <td>1000</td> <td>0</td> <td>384.5 tps</td> <td>48.10 s</td> <td>2.07 s</td> <td>28.49 s</td> <td>20.5 tps</td>
                     </tr>
                 </table>
                 <strong class="tag">resource consumption</strong>
@@ -203,16 +210,22 @@
                          <th>TYPE</th> <th>NAME</th> <th>Memory(max)</th> <th>Memory(avg)</th> <th>CPU(max)</th> <th>CPU(avg)</th> <th>Traffic In</th> <th>Traffic Out</th> <th>Disc Read</th> <th>Disc Write</th>
                     </tr>
                     <tr>
-                         <td>Process</td> <td>node local-client.js(avg)</td> <td>90.0MB</td> <td>85.2MB</td> <td>36.98%</td> <td>7.78%</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td>
+                         <td>Process</td> <td>node local-client.js(avg)</td> <td>98.6MB</td> <td>92.2MB</td> <td>54.36%</td> <td>5.85%</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td>
                     </tr>
                     <tr>
-                         <td>Docker</td> <td>burrow_1</td> <td>104.1MB</td> <td>99.5MB</td> <td>111.91%</td> <td>52.71%</td> <td>0B</td> <td>-</td> <td>0B</td> <td>5.0MB</td>
+                         <td>Docker</td> <td>dev-peer0.org1.example.co...le-v0</td> <td>66.0MB</td> <td>64.6MB</td> <td>27.63%</td> <td>2.00%</td> <td>1.5MB</td> <td>564.5KB</td> <td>0B</td> <td>0B</td>
                     </tr>
                     <tr>
-                         <td>Docker</td> <td>burrow_0</td> <td>954.8MB</td> <td>653.0MB</td> <td>163.39%</td> <td>101.07%</td> <td>0B</td> <td>-</td> <td>0B</td> <td>5.2MB</td>
+                         <td>Docker</td> <td>dev-peer0.org1.example.co...es-v1</td> <td>46.7MB</td> <td>46.7MB</td> <td>0.02%</td> <td>0.00%</td> <td>177B</td> <td>0B</td> <td>0B</td> <td>0B</td>
                     </tr>
                     <tr>
-                         <td>Docker</td> <td>stupefied_mendeleev</td> <td>0B</td> <td>0B</td> <td>0.00%</td> <td>0.00%</td> <td>0B</td> <td>-</td> <td>0B</td> <td>0B</td>
+                         <td>Docker</td> <td>peer0.org1.example.com</td> <td>240.5MB</td> <td>238.2MB</td> <td>107.67%</td> <td>23.26%</td> <td>4.6MB</td> <td>14.5MB</td> <td>0B</td> <td>5.7MB</td>
+                    </tr>
+                    <tr>
+                         <td>Docker</td> <td>orderer.example.com</td> <td>52.6MB</td> <td>51.0MB</td> <td>125.71%</td> <td>12.63%</td> <td>3.1MB</td> <td>3.3MB</td> <td>0B</td> <td>3.8MB</td>
+                    </tr>
+                    <tr>
+                         <td>Docker</td> <td>ca.org1.example.com</td> <td>6.9MB</td> <td>6.9MB</td> <td>0.00%</td> <td>0.00%</td> <td>70B</td> <td>0B</td> <td>0B</td> <td>0B</td>
                     </tr>
                 </table>
                 <h3>round 2</h3>
@@ -222,7 +235,7 @@
                          <th>Name</th> <th>Succ</th> <th>Fail</th> <th>Send Rate</th> <th>Max Latency</th> <th>Min Latency</th> <th>Avg Latency</th> <th>Throughput</th>
                     </tr>
                     <tr>
-                         <td>open</td> <td>3000</td> <td>0</td> <td>983.6 tps</td> <td>23.86 s</td> <td>5.88 s</td> <td>17.16 s</td> <td>114.8 tps</td>
+                         <td>open</td> <td>1000</td> <td>0</td> <td>356.8 tps</td> <td>47.77 s</td> <td>2.64 s</td> <td>28.58 s</td> <td>20.2 tps</td>
                     </tr>
                 </table>
                 <strong class="tag">resource consumption</strong>
@@ -231,16 +244,22 @@
                          <th>TYPE</th> <th>NAME</th> <th>Memory(max)</th> <th>Memory(avg)</th> <th>CPU(max)</th> <th>CPU(avg)</th> <th>Traffic In</th> <th>Traffic Out</th> <th>Disc Read</th> <th>Disc Write</th>
                     </tr>
                     <tr>
-                         <td>Process</td> <td>node local-client.js(avg)</td> <td>104.8MB</td> <td>102.2MB</td> <td>25.78%</td> <td>5.17%</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td>
+                         <td>Process</td> <td>node local-client.js(avg)</td> <td>95.0MB</td> <td>86.4MB</td> <td>55.63%</td> <td>5.82%</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td>
                     </tr>
                     <tr>
-                         <td>Docker</td> <td>burrow_1</td> <td>155.5MB</td> <td>132.1MB</td> <td>156.17%</td> <td>58.06%</td> <td>0B</td> <td>-</td> <td>732.0KB</td> <td>7.1MB</td>
+                         <td>Docker</td> <td>dev-peer0.org1.example.co...le-v0</td> <td>70.5MB</td> <td>69.7MB</td> <td>30.87%</td> <td>3.01%</td> <td>1.4MB</td> <td>490.5KB</td> <td>0B</td> <td>0B</td>
                     </tr>
                     <tr>
-                         <td>Docker</td> <td>burrow_0</td> <td>1.5GB</td> <td>1.1GB</td> <td>303.05%</td> <td>145.09%</td> <td>0B</td> <td>-</td> <td>6.8MB</td> <td>11.7MB</td>
+                         <td>Docker</td> <td>dev-peer0.org1.example.co...es-v1</td> <td>46.7MB</td> <td>46.7MB</td> <td>0.11%</td> <td>0.01%</td> <td>340B</td> <td>233B</td> <td>0B</td> <td>0B</td>
                     </tr>
                     <tr>
-                         <td>Docker</td> <td>stupefied_mendeleev</td> <td>0B</td> <td>0B</td> <td>0.00%</td> <td>0.00%</td> <td>0B</td> <td>-</td> <td>0B</td> <td>0B</td>
+                         <td>Docker</td> <td>peer0.org1.example.com</td> <td>244.4MB</td> <td>242.3MB</td> <td>125.31%</td> <td>21.64%</td> <td>4.6MB</td> <td>15.6MB</td> <td>0B</td> <td>5.7MB</td>
+                    </tr>
+                    <tr>
+                         <td>Docker</td> <td>orderer.example.com</td> <td>57.9MB</td> <td>56.6MB</td> <td>127.74%</td> <td>11.00%</td> <td>3.1MB</td> <td>3.3MB</td> <td>0B</td> <td>3.8MB</td>
+                    </tr>
+                    <tr>
+                         <td>Docker</td> <td>ca.org1.example.com</td> <td>6.9MB</td> <td>6.9MB</td> <td>0.00%</td> <td>0.00%</td> <td>214B</td> <td>0B</td> <td>0B</td> <td>0B</td>
                     </tr>
                 </table>
                 <h3>round 3</h3>
@@ -250,7 +269,7 @@
                          <th>Name</th> <th>Succ</th> <th>Fail</th> <th>Send Rate</th> <th>Max Latency</th> <th>Min Latency</th> <th>Avg Latency</th> <th>Throughput</th>
                     </tr>
                     <tr>
-                         <td>open</td> <td>4000</td> <td>0</td> <td>918.1 tps</td> <td>44.97 s</td> <td>11.19 s</td> <td>33.01 s</td> <td>87.4 tps</td>
+                         <td>open</td> <td>1000</td> <td>0</td> <td>410.0 tps</td> <td>49.27 s</td> <td>2.00 s</td> <td>29.54 s</td> <td>20.1 tps</td>
                     </tr>
                 </table>
                 <strong class="tag">resource consumption</strong>
@@ -259,16 +278,22 @@
                          <th>TYPE</th> <th>NAME</th> <th>Memory(max)</th> <th>Memory(avg)</th> <th>CPU(max)</th> <th>CPU(avg)</th> <th>Traffic In</th> <th>Traffic Out</th> <th>Disc Read</th> <th>Disc Write</th>
                     </tr>
                     <tr>
-                         <td>Process</td> <td>node local-client.js(avg)</td> <td>107.4MB</td> <td>100.2MB</td> <td>29.01%</td> <td>3.61%</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td>
+                         <td>Process</td> <td>node local-client.js(avg)</td> <td>104.4MB</td> <td>99.2MB</td> <td>58.08%</td> <td>5.66%</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td>
                     </tr>
                     <tr>
-                         <td>Docker</td> <td>burrow_1</td> <td>205.6MB</td> <td>179.3MB</td> <td>176.64%</td> <td>44.42%</td> <td>0B</td> <td>-</td> <td>3.6MB</td> <td>9.1MB</td>
+                         <td>Docker</td> <td>dev-peer0.org1.example.co...le-v0</td> <td>70.5MB</td> <td>69.2MB</td> <td>34.75%</td> <td>2.52%</td> <td>1.5MB</td> <td>543.5KB</td> <td>0B</td> <td>0B</td>
                     </tr>
                     <tr>
-                         <td>Docker</td> <td>burrow_0</td> <td>2.9GB</td> <td>2.0GB</td> <td>354.10%</td> <td>142.34%</td> <td>0B</td> <td>-</td> <td>8.7MB</td> <td>9.5MB</td>
+                         <td>Docker</td> <td>dev-peer0.org1.example.co...es-v1</td> <td>46.7MB</td> <td>46.7MB</td> <td>0.02%</td> <td>0.00%</td> <td>177B</td> <td>0B</td> <td>0B</td> <td>0B</td>
                     </tr>
                     <tr>
-                         <td>Docker</td> <td>stupefied_mendeleev</td> <td>0B</td> <td>0B</td> <td>0.00%</td> <td>0.00%</td> <td>0B</td> <td>-</td> <td>0B</td> <td>0B</td>
+                         <td>Docker</td> <td>peer0.org1.example.com</td> <td>248.3MB</td> <td>246.0MB</td> <td>92.54%</td> <td>20.89%</td> <td>4.9MB</td> <td>15.5MB</td> <td>0B</td> <td>5.7MB</td>
+                    </tr>
+                    <tr>
+                         <td>Docker</td> <td>orderer.example.com</td> <td>61.1MB</td> <td>60.1MB</td> <td>119.39%</td> <td>10.46%</td> <td>3.1MB</td> <td>3.3MB</td> <td>0B</td> <td>3.8MB</td>
+                    </tr>
+                    <tr>
+                         <td>Docker</td> <td>ca.org1.example.com</td> <td>6.9MB</td> <td>6.9MB</td> <td>0.00%</td> <td>0.00%</td> <td>0B</td> <td>0B</td> <td>0B</td> <td>0B</td>
                     </tr>
                 </table>
                 <h3>round 4</h3>
@@ -278,7 +303,7 @@
                          <th>Name</th> <th>Succ</th> <th>Fail</th> <th>Send Rate</th> <th>Max Latency</th> <th>Min Latency</th> <th>Avg Latency</th> <th>Throughput</th>
                     </tr>
                     <tr>
-                         <td>open</td> <td>5000</td> <td>0</td> <td>948.6 tps</td> <td>55.84 s</td> <td>20.41 s</td> <td>40.38 s</td> <td>87.3 tps</td>
+                         <td>open</td> <td>1000</td> <td>0</td> <td>368.5 tps</td> <td>50.48 s</td> <td>2.36 s</td> <td>30.54 s</td> <td>19.8 tps</td>
                     </tr>
                 </table>
                 <strong class="tag">resource consumption</strong>
@@ -287,16 +312,22 @@
                          <th>TYPE</th> <th>NAME</th> <th>Memory(max)</th> <th>Memory(avg)</th> <th>CPU(max)</th> <th>CPU(avg)</th> <th>Traffic In</th> <th>Traffic Out</th> <th>Disc Read</th> <th>Disc Write</th>
                     </tr>
                     <tr>
-                         <td>Process</td> <td>node local-client.js(avg)</td> <td>96.2MB</td> <td>87.9MB</td> <td>34.05%</td> <td>4.09%</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td>
+                         <td>Process</td> <td>node local-client.js(avg)</td> <td>99.3MB</td> <td>89.6MB</td> <td>56.61%</td> <td>5.73%</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td>
                     </tr>
                     <tr>
-                         <td>Docker</td> <td>burrow_1</td> <td>237.3MB</td> <td>214.6MB</td> <td>152.50%</td> <td>61.03%</td> <td>0B</td> <td>-</td> <td>3.1MB</td> <td>16.9MB</td>
+                         <td>Docker</td> <td>dev-peer0.org1.example.co...le-v0</td> <td>68.0MB</td> <td>67.3MB</td> <td>29.80%</td> <td>2.14%</td> <td>1.3MB</td> <td>495.5KB</td> <td>0B</td> <td>0B</td>
                     </tr>
                     <tr>
-                         <td>Docker</td> <td>burrow_0</td> <td>2.9GB</td> <td>2.9GB</td> <td>373.66%</td> <td>172.81%</td> <td>0B</td> <td>-</td> <td>3.6MB</td> <td>15.1MB</td>
+                         <td>Docker</td> <td>dev-peer0.org1.example.co...es-v1</td> <td>46.7MB</td> <td>46.7MB</td> <td>0.08%</td> <td>0.00%</td> <td>167B</td> <td>233B</td> <td>0B</td> <td>0B</td>
                     </tr>
                     <tr>
-                         <td>Docker</td> <td>stupefied_mendeleev</td> <td>0B</td> <td>0B</td> <td>0.00%</td> <td>0.00%</td> <td>0B</td> <td>-</td> <td>0B</td> <td>0B</td>
+                         <td>Docker</td> <td>peer0.org1.example.com</td> <td>252.1MB</td> <td>249.9MB</td> <td>116.96%</td> <td>22.66%</td> <td>4.4MB</td> <td>15.2MB</td> <td>0B</td> <td>5.7MB</td>
+                    </tr>
+                    <tr>
+                         <td>Docker</td> <td>orderer.example.com</td> <td>65.8MB</td> <td>64.6MB</td> <td>62.99%</td> <td>8.26%</td> <td>3.1MB</td> <td>3.3MB</td> <td>0B</td> <td>3.8MB</td>
+                    </tr>
+                    <tr>
+                         <td>Docker</td> <td>ca.org1.example.com</td> <td>6.9MB</td> <td>5.2MB</td> <td>0.29%</td> <td>0.01%</td> <td>0B</td> <td>0B</td> <td>0B</td> <td>0B</td>
                     </tr>
                 </table>
         </div>
@@ -310,7 +341,7 @@
                          <th>Name</th> <th>Succ</th> <th>Fail</th> <th>Send Rate</th> <th>Max Latency</th> <th>Min Latency</th> <th>Avg Latency</th> <th>Throughput</th>
                     </tr>
                     <tr>
-                         <td>query</td> <td>1000</td> <td>0</td> <td>806.5 tps</td> <td>3.65 s</td> <td>0.00 s</td> <td>2.39 s</td> <td>228.3 tps</td>
+                         <td>query</td> <td>1000</td> <td>0</td> <td>436.3 tps</td> <td>2.57 s</td> <td>0.57 s</td> <td>1.69 s</td> <td>315.5 tps</td>
                     </tr>
                 </table>
                 <strong class="tag">resource consumption</strong>
@@ -319,16 +350,22 @@
                          <th>TYPE</th> <th>NAME</th> <th>Memory(max)</th> <th>Memory(avg)</th> <th>CPU(max)</th> <th>CPU(avg)</th> <th>Traffic In</th> <th>Traffic Out</th> <th>Disc Read</th> <th>Disc Write</th>
                     </tr>
                     <tr>
-                         <td>Process</td> <td>node local-client.js(avg)</td> <td>81.2MB</td> <td>81.0MB</td> <td>37.39%</td> <td>11.94%</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td>
+                         <td>Process</td> <td>node local-client.js(avg)</td> <td>104.1MB</td> <td>101.8MB</td> <td>52.94%</td> <td>25.62%</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td>
                     </tr>
                     <tr>
-                         <td>Docker</td> <td>burrow_1</td> <td>237.3MB</td> <td>237.3MB</td> <td>3.10%</td> <td>2.87%</td> <td>0B</td> <td>-</td> <td>0B</td> <td>0B</td>
+                         <td>Docker</td> <td>dev-peer0.org1.example.co...le-v0</td> <td>63.6MB</td> <td>58.2MB</td> <td>38.91%</td> <td>23.53%</td> <td>1.2MB</td> <td>327.9KB</td> <td>0B</td> <td>0B</td>
                     </tr>
                     <tr>
-                         <td>Docker</td> <td>burrow_0</td> <td>2.9GB</td> <td>2.9GB</td> <td>238.57%</td> <td>192.47%</td> <td>0B</td> <td>-</td> <td>0B</td> <td>0B</td>
+                         <td>Docker</td> <td>dev-peer0.org1.example.co...es-v1</td> <td>46.7MB</td> <td>46.7MB</td> <td>0.00%</td> <td>0.00%</td> <td>0B</td> <td>0B</td> <td>0B</td> <td>0B</td>
                     </tr>
                     <tr>
-                         <td>Docker</td> <td>stupefied_mendeleev</td> <td>0B</td> <td>0B</td> <td>0.00%</td> <td>0.00%</td> <td>0B</td> <td>-</td> <td>0B</td> <td>0B</td>
+                         <td>Docker</td> <td>peer0.org1.example.com</td> <td>252.3MB</td> <td>252.2MB</td> <td>127.59%</td> <td>113.44%</td> <td>1.0MB</td> <td>2.4MB</td> <td>0B</td> <td>0B</td>
+                    </tr>
+                    <tr>
+                         <td>Docker</td> <td>orderer.example.com</td> <td>65.8MB</td> <td>65.8MB</td> <td>0.00%</td> <td>0.00%</td> <td>0B</td> <td>0B</td> <td>0B</td> <td>0B</td>
+                    </tr>
+                    <tr>
+                         <td>Docker</td> <td>ca.org1.example.com</td> <td>5.2MB</td> <td>5.2MB</td> <td>0.00%</td> <td>0.00%</td> <td>0B</td> <td>0B</td> <td>0B</td> <td>0B</td>
                     </tr>
                 </table>
                 <h3>round 1</h3>
@@ -338,7 +375,7 @@
                          <th>Name</th> <th>Succ</th> <th>Fail</th> <th>Send Rate</th> <th>Max Latency</th> <th>Min Latency</th> <th>Avg Latency</th> <th>Throughput</th>
                     </tr>
                     <tr>
-                         <td>query</td> <td>2000</td> <td>0</td> <td>847.8 tps</td> <td>8.52 s</td> <td>0.01 s</td> <td>6.21 s</td> <td>220.4 tps</td>
+                         <td>query</td> <td>1000</td> <td>0</td> <td>402.7 tps</td> <td>2.50 s</td> <td>0.03 s</td> <td>1.62 s</td> <td>307.7 tps</td>
                     </tr>
                 </table>
                 <strong class="tag">resource consumption</strong>
@@ -347,16 +384,22 @@
                          <th>TYPE</th> <th>NAME</th> <th>Memory(max)</th> <th>Memory(avg)</th> <th>CPU(max)</th> <th>CPU(avg)</th> <th>Traffic In</th> <th>Traffic Out</th> <th>Disc Read</th> <th>Disc Write</th>
                     </tr>
                     <tr>
-                         <td>Process</td> <td>node local-client.js(avg)</td> <td>81.2MB</td> <td>80.7MB</td> <td>23.74%</td> <td>6.41%</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td>
+                         <td>Process</td> <td>node local-client.js(avg)</td> <td>105.1MB</td> <td>102.5MB</td> <td>60.68%</td> <td>28.34%</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td>
                     </tr>
                     <tr>
-                         <td>Docker</td> <td>burrow_1</td> <td>237.3MB</td> <td>237.3MB</td> <td>3.57%</td> <td>2.00%</td> <td>0B</td> <td>-</td> <td>0B</td> <td>4.0KB</td>
+                         <td>Docker</td> <td>dev-peer0.org1.example.co...le-v0</td> <td>72.8MB</td> <td>69.0MB</td> <td>31.36%</td> <td>11.76%</td> <td>1.3MB</td> <td>371.3KB</td> <td>0B</td> <td>0B</td>
                     </tr>
                     <tr>
-                         <td>Docker</td> <td>burrow_0</td> <td>2.9GB</td> <td>2.9GB</td> <td>365.50%</td> <td>248.69%</td> <td>0B</td> <td>-</td> <td>8.0KB</td> <td>0B</td>
+                         <td>Docker</td> <td>dev-peer0.org1.example.co...es-v1</td> <td>46.7MB</td> <td>46.7MB</td> <td>0.00%</td> <td>0.00%</td> <td>0B</td> <td>0B</td> <td>0B</td> <td>0B</td>
                     </tr>
                     <tr>
-                         <td>Docker</td> <td>stupefied_mendeleev</td> <td>0B</td> <td>0B</td> <td>0.00%</td> <td>0.00%</td> <td>0B</td> <td>-</td> <td>0B</td> <td>0B</td>
+                         <td>Docker</td> <td>peer0.org1.example.com</td> <td>252.2MB</td> <td>252.2MB</td> <td>131.29%</td> <td>51.40%</td> <td>1.6MB</td> <td>2.5MB</td> <td>0B</td> <td>0B</td>
+                    </tr>
+                    <tr>
+                         <td>Docker</td> <td>orderer.example.com</td> <td>65.8MB</td> <td>65.8MB</td> <td>0.00%</td> <td>0.00%</td> <td>0B</td> <td>0B</td> <td>0B</td> <td>0B</td>
+                    </tr>
+                    <tr>
+                         <td>Docker</td> <td>ca.org1.example.com</td> <td>5.2MB</td> <td>5.2MB</td> <td>0.00%</td> <td>0.00%</td> <td>0B</td> <td>0B</td> <td>0B</td> <td>0B</td>
                     </tr>
                 </table>
                 <h3>round 2</h3>
@@ -366,7 +409,7 @@
                          <th>Name</th> <th>Succ</th> <th>Fail</th> <th>Send Rate</th> <th>Max Latency</th> <th>Min Latency</th> <th>Avg Latency</th> <th>Throughput</th>
                     </tr>
                     <tr>
-                         <td>query</td> <td>3000</td> <td>0</td> <td>866.3 tps</td> <td>15.36 s</td> <td>0.01 s</td> <td>10.30 s</td> <td>191.6 tps</td>
+                         <td>query</td> <td>1000</td> <td>0</td> <td>411.0 tps</td> <td>2.62 s</td> <td>0.41 s</td> <td>1.70 s</td> <td>319.5 tps</td>
                     </tr>
                 </table>
                 <strong class="tag">resource consumption</strong>
@@ -375,16 +418,22 @@
                          <th>TYPE</th> <th>NAME</th> <th>Memory(max)</th> <th>Memory(avg)</th> <th>CPU(max)</th> <th>CPU(avg)</th> <th>Traffic In</th> <th>Traffic Out</th> <th>Disc Read</th> <th>Disc Write</th>
                     </tr>
                     <tr>
-                         <td>Process</td> <td>node local-client.js(avg)</td> <td>87.4MB</td> <td>82.5MB</td> <td>23.45%</td> <td>5.42%</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td>
+                         <td>Process</td> <td>node local-client.js(avg)</td> <td>102.8MB</td> <td>100.9MB</td> <td>51.31%</td> <td>25.96%</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td>
                     </tr>
                     <tr>
-                         <td>Docker</td> <td>burrow_1</td> <td>237.5MB</td> <td>236.8MB</td> <td>6.23%</td> <td>2.12%</td> <td>0B</td> <td>-</td> <td>0B</td> <td>4.0KB</td>
+                         <td>Docker</td> <td>dev-peer0.org1.example.co...le-v0</td> <td>85.5MB</td> <td>79.3MB</td> <td>33.88%</td> <td>17.37%</td> <td>1.3MB</td> <td>289.8KB</td> <td>0B</td> <td>0B</td>
                     </tr>
                     <tr>
-                         <td>Docker</td> <td>burrow_0</td> <td>2.9GB</td> <td>2.9GB</td> <td>359.53%</td> <td>231.99%</td> <td>0B</td> <td>-</td> <td>16.0KB</td> <td>0B</td>
+                         <td>Docker</td> <td>dev-peer0.org1.example.co...es-v1</td> <td>46.7MB</td> <td>46.7MB</td> <td>0.01%</td> <td>0.00%</td> <td>0B</td> <td>0B</td> <td>0B</td> <td>0B</td>
                     </tr>
                     <tr>
-                         <td>Docker</td> <td>stupefied_mendeleev</td> <td>0B</td> <td>0B</td> <td>0.00%</td> <td>0.00%</td> <td>0B</td> <td>-</td> <td>0B</td> <td>0B</td>
+                         <td>Docker</td> <td>peer0.org1.example.com</td> <td>252.3MB</td> <td>252.3MB</td> <td>201.27%</td> <td>117.19%</td> <td>1.1MB</td> <td>2.1MB</td> <td>0B</td> <td>0B</td>
+                    </tr>
+                    <tr>
+                         <td>Docker</td> <td>orderer.example.com</td> <td>65.8MB</td> <td>65.8MB</td> <td>0.01%</td> <td>0.00%</td> <td>0B</td> <td>0B</td> <td>0B</td> <td>0B</td>
+                    </tr>
+                    <tr>
+                         <td>Docker</td> <td>ca.org1.example.com</td> <td>5.2MB</td> <td>5.2MB</td> <td>0.00%</td> <td>0.00%</td> <td>0B</td> <td>0B</td> <td>0B</td> <td>0B</td>
                     </tr>
                 </table>
                 <h3>round 3</h3>
@@ -394,7 +443,7 @@
                          <th>Name</th> <th>Succ</th> <th>Fail</th> <th>Send Rate</th> <th>Max Latency</th> <th>Min Latency</th> <th>Avg Latency</th> <th>Throughput</th>
                     </tr>
                     <tr>
-                         <td>query</td> <td>4000</td> <td>0</td> <td>293.0 tps</td> <td>26.25 s</td> <td>0.01 s</td> <td>17.95 s</td> <td>139.9 tps</td>
+                         <td>query</td> <td>1000</td> <td>0</td> <td>483.1 tps</td> <td>2.92 s</td> <td>0.71 s</td> <td>1.74 s</td> <td>310.5 tps</td>
                     </tr>
                 </table>
                 <strong class="tag">resource consumption</strong>
@@ -403,16 +452,22 @@
                          <th>TYPE</th> <th>NAME</th> <th>Memory(max)</th> <th>Memory(avg)</th> <th>CPU(max)</th> <th>CPU(avg)</th> <th>Traffic In</th> <th>Traffic Out</th> <th>Disc Read</th> <th>Disc Write</th>
                     </tr>
                     <tr>
-                         <td>Process</td> <td>node local-client.js(avg)</td> <td>68.5MB</td> <td>64.4MB</td> <td>32.23%</td> <td>4.53%</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td>
+                         <td>Process</td> <td>node local-client.js(avg)</td> <td>98.5MB</td> <td>96.8MB</td> <td>54.96%</td> <td>26.47%</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td>
                     </tr>
                     <tr>
-                         <td>Docker</td> <td>burrow_1</td> <td>229.6MB</td> <td>228.1MB</td> <td>2.34%</td> <td>1.49%</td> <td>0B</td> <td>-</td> <td>72.0KB</td> <td>8.0KB</td>
+                         <td>Docker</td> <td>dev-peer0.org1.example.co...le-v0</td> <td>87.2MB</td> <td>86.5MB</td> <td>28.96%</td> <td>26.14%</td> <td>1.0MB</td> <td>301.1KB</td> <td>0B</td> <td>0B</td>
                     </tr>
                     <tr>
-                         <td>Docker</td> <td>burrow_0</td> <td>3.1GB</td> <td>2.9GB</td> <td>311.95%</td> <td>221.50%</td> <td>0B</td> <td>-</td> <td>656.0KB</td> <td>4.0KB</td>
+                         <td>Docker</td> <td>dev-peer0.org1.example.co...es-v1</td> <td>46.7MB</td> <td>46.7MB</td> <td>0.00%</td> <td>0.00%</td> <td>0B</td> <td>0B</td> <td>0B</td> <td>0B</td>
                     </tr>
                     <tr>
-                         <td>Docker</td> <td>stupefied_mendeleev</td> <td>0B</td> <td>0B</td> <td>0.00%</td> <td>0.00%</td> <td>0B</td> <td>-</td> <td>0B</td> <td>0B</td>
+                         <td>Docker</td> <td>peer0.org1.example.com</td> <td>252.3MB</td> <td>252.2MB</td> <td>109.25%</td> <td>95.71%</td> <td>1.2MB</td> <td>1.9MB</td> <td>0B</td> <td>0B</td>
+                    </tr>
+                    <tr>
+                         <td>Docker</td> <td>orderer.example.com</td> <td>65.8MB</td> <td>65.8MB</td> <td>0.07%</td> <td>0.05%</td> <td>42B</td> <td>42B</td> <td>0B</td> <td>0B</td>
+                    </tr>
+                    <tr>
+                         <td>Docker</td> <td>ca.org1.example.com</td> <td>5.2MB</td> <td>5.2MB</td> <td>0.00%</td> <td>0.00%</td> <td>0B</td> <td>0B</td> <td>0B</td> <td>0B</td>
                     </tr>
                 </table>
                 <h3>round 4</h3>
@@ -422,7 +477,7 @@
                          <th>Name</th> <th>Succ</th> <th>Fail</th> <th>Send Rate</th> <th>Max Latency</th> <th>Min Latency</th> <th>Avg Latency</th> <th>Throughput</th>
                     </tr>
                     <tr>
-                         <td>query</td> <td>5000</td> <td>0</td> <td>347.9 tps</td> <td>32.39 s</td> <td>0.01 s</td> <td>24.25 s</td> <td>139.8 tps</td>
+                         <td>query</td> <td>1000</td> <td>0</td> <td>405.5 tps</td> <td>2.41 s</td> <td>0.27 s</td> <td>1.55 s</td> <td>326.7 tps</td>
                     </tr>
                 </table>
                 <strong class="tag">resource consumption</strong>
@@ -431,16 +486,22 @@
                          <th>TYPE</th> <th>NAME</th> <th>Memory(max)</th> <th>Memory(avg)</th> <th>CPU(max)</th> <th>CPU(avg)</th> <th>Traffic In</th> <th>Traffic Out</th> <th>Disc Read</th> <th>Disc Write</th>
                     </tr>
                     <tr>
-                         <td>Process</td> <td>node local-client.js(avg)</td> <td>67.9MB</td> <td>64.0MB</td> <td>23.64%</td> <td>3.79%</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td>
+                         <td>Process</td> <td>node local-client.js(avg)</td> <td>98.7MB</td> <td>98.0MB</td> <td>52.11%</td> <td>27.13%</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td>
                     </tr>
                     <tr>
-                         <td>Docker</td> <td>burrow_1</td> <td>227.7MB</td> <td>225.5MB</td> <td>6.21%</td> <td>1.78%</td> <td>0B</td> <td>-</td> <td>1.8MB</td> <td>64.0KB</td>
+                         <td>Docker</td> <td>dev-peer0.org1.example.co...le-v0</td> <td>87.7MB</td> <td>87.5MB</td> <td>19.58%</td> <td>10.15%</td> <td>642.8KB</td> <td>155.2KB</td> <td>0B</td> <td>0B</td>
                     </tr>
                     <tr>
-                         <td>Docker</td> <td>burrow_0</td> <td>3.6GB</td> <td>3.3GB</td> <td>339.48%</td> <td>220.77%</td> <td>0B</td> <td>-</td> <td>6.8MB</td> <td>64.0KB</td>
+                         <td>Docker</td> <td>dev-peer0.org1.example.co...es-v1</td> <td>46.7MB</td> <td>46.7MB</td> <td>0.01%</td> <td>0.00%</td> <td>0B</td> <td>0B</td> <td>0B</td> <td>0B</td>
                     </tr>
                     <tr>
-                         <td>Docker</td> <td>stupefied_mendeleev</td> <td>0B</td> <td>0B</td> <td>0.00%</td> <td>0.00%</td> <td>0B</td> <td>-</td> <td>0B</td> <td>0B</td>
+                         <td>Docker</td> <td>peer0.org1.example.com</td> <td>252.3MB</td> <td>252.3MB</td> <td>134.75%</td> <td>72.01%</td> <td>1.1MB</td> <td>1.2MB</td> <td>0B</td> <td>0B</td>
+                    </tr>
+                    <tr>
+                         <td>Docker</td> <td>orderer.example.com</td> <td>65.8MB</td> <td>65.8MB</td> <td>0.02%</td> <td>0.02%</td> <td>0B</td> <td>0B</td> <td>0B</td> <td>0B</td>
+                    </tr>
+                    <tr>
+                         <td>Docker</td> <td>ca.org1.example.com</td> <td>5.2MB</td> <td>5.2MB</td> <td>0.00%</td> <td>0.00%</td> <td>0B</td> <td>0B</td> <td>0B</td> <td>0B</td>
                     </tr>
                 </table>
         </div>
@@ -460,10 +521,10 @@
       &quot;description&quot;: &quot;Test description for the opening of an account through the deployed chaincode&quot;,
       &quot;txNumber&quot;: [
         1000,
-        2000,
-        3000,
-        4000,
-        5000
+        1000,
+        1000,
+        1000,
+        1000
       ],
       &quot;rateControl&quot;: [
         {
@@ -507,10 +568,10 @@
       &quot;description&quot;: &quot;Test description for the query performance of the deployed chaincode&quot;,
       &quot;txNumber&quot;: [
         1000,
-        2000,
-        3000,
-        4000,
-        5000
+        1000,
+        1000,
+        1000,
+        1000
       ],
       &quot;rateControl&quot;: [
         {
