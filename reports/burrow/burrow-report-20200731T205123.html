@@ -1,0 +1,376 @@
+<!doctype html>
+<html>
+<head>
+    <title>Caliper Report</title>
+    <meta charset="UTF-8"/>
+    <style type="text/css">
+        .left-column {
+            position: fixed;
+            width:20%;
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -khtml-border-radius: 5px;
+        }
+        .right-column {
+            margin-left: 22%;
+            width:60%;
+        }
+        .left-column ul,h2 {
+            display: block;
+            margin: 10px;
+            padding: 0;
+            list-style: none;
+        }
+        .left-column ul{
+            border-top: 1px solid #d9d9d9;
+            font-size: 14px;
+        }
+        .left-column li{
+            margin-bottom: 5px;
+            color: #5e6b73;
+        }
+        .left-column h3 {
+            border-left: 5px solid #009a61;
+        }
+        .right-column>div {
+            border-top: 1px solid #d9d9d9;
+        }
+        .right-column table {
+            font-family: verdana,arial,sans-serif;
+            font-size:11px;
+            color:#333333;
+            border-width: 1px;
+            border-color: #666666;
+            border-collapse: collapse;
+            margin-bottom: 10px;
+        }
+        .right-column th {
+            border-width: 1px;
+            padding: 8px;
+            border-style: solid;
+            border-color: #666666;
+            background-color: #f2f2f2;
+        }
+        .right-column td {
+            border-width: 1px;
+            padding: 8px;
+            border-style: solid;
+            border-color: #666666;
+            background-color: #ffffff;
+        }
+        .tag {
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 5px 10px;
+            background-color: rgba(1,126,102,0.08);
+            font-family: verdana,arial,sans-serif;
+            font-size:11px;
+            color: #017E66;
+            text-align: center;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -khtml-border-radius: 5px;
+        }
+        pre {
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -khtml-border-radius: 5px;
+            overflow:auto;
+            max-height:300px;
+            font-size:12px;
+        }
+    </style>
+</head>
+<body>
+
+<main>
+    <div class="left-column">
+        <h2>Caliper Report</h2>
+        <ul>
+            <h3>&nbspBasic information</h3>
+            <li><strong>DLT: &nbsp</strong><span>burrow</span></li>
+            <li><strong>Benchmark: &nbsp</strong><span>simple</span></li>
+            <li><strong>Description: &nbsp</strong><span>This is an example benchmark for caliper, to test the backend DLT&#39;s performance with simple account opening &amp; querying transactions</span></li>
+            <li><strong>Test Rounds: &nbsp</strong><span>6</span></li>
+            <li><a href="#benchmarkInfo">Details</a></li>
+        </ul>
+        <ul>
+            <h3>&nbspBenchmark results</h3>
+            <li><a href="#benchmarksummary">Summary</a></li>
+                <li><a href="#open">open</a></li>
+        </ul>
+        <ul>
+            <h3>&nbspSystem Under Test</h3>
+            <li><strong>Version: &nbsp</strong><span>develop</span></li>
+            <li><strong>Size: &nbsp</strong><span>2 Peers</span></li>
+            <li><strong>Distribution: &nbsp</strong><span>Single Host</span></li>
+            <li><a href="#sutdetails">Details</a></li>
+        </ul>
+    </div>
+
+    <div class="right-column">
+        <div id="benchmarksummary">
+            <table>
+                <h3>Summary</h3>
+                <tr>
+                     <th>Test</th> <th>Name</th> <th>Succ</th> <th>Fail</th> <th>Send Rate</th> <th>Max Latency</th> <th>Min Latency</th> <th>Avg Latency</th> <th>Throughput</th>
+                </tr>
+
+                <tr>
+                     <td>1</td> <td>open</td> <td>50</td> <td>0</td> <td>42.7 tps</td> <td>2.71 s</td> <td>1.57 s</td> <td>2.15 s</td> <td>18.2 tps</td>
+                </tr>
+                <tr>
+                     <td>2</td> <td>open</td> <td>100</td> <td>0</td> <td>97.4 tps</td> <td>3.04 s</td> <td>2.05 s</td> <td>2.57 s</td> <td>32.0 tps</td>
+                </tr>
+                <tr>
+                     <td>3</td> <td>open</td> <td>150</td> <td>0</td> <td>146.2 tps</td> <td>3.24 s</td> <td>2.24 s</td> <td>2.76 s</td> <td>45.4 tps</td>
+                </tr>
+                <tr>
+                     <td>4</td> <td>open</td> <td>200</td> <td>0</td> <td>181.0 tps</td> <td>2.82 s</td> <td>1.54 s</td> <td>2.10 s</td> <td>54.5 tps</td>
+                </tr>
+                <tr>
+                     <td>5</td> <td>open</td> <td>250</td> <td>0</td> <td>235.0 tps</td> <td>2.99 s</td> <td>1.20 s</td> <td>1.94 s</td> <td>66.8 tps</td>
+                </tr>
+                <tr>
+                     <td>6</td> <td>open</td> <td>300</td> <td>0</td> <td>272.5 tps</td> <td>3.69 s</td> <td>1.67 s</td> <td>2.97 s</td> <td>73.7 tps</td>
+                </tr>
+            </table>
+        </div>
+        <div id="open">
+            <h3>open</h3>
+            <p>Test description for the opening of an account through the deployed chaincode</p>                
+                <h3>round 0</h3>
+                <strong class="tag">performance metrics</strong>
+                <table>
+                    <tr>
+                         <th>Name</th> <th>Succ</th> <th>Fail</th> <th>Send Rate</th> <th>Max Latency</th> <th>Min Latency</th> <th>Avg Latency</th> <th>Throughput</th>
+                    </tr>
+                    <tr>
+                         <td>open</td> <td>50</td> <td>0</td> <td>42.7 tps</td> <td>2.71 s</td> <td>1.57 s</td> <td>2.15 s</td> <td>18.2 tps</td>
+                    </tr>
+                </table>
+                <strong class="tag">resource consumption</strong>
+                <table>
+                    <tr>
+                         <th>TYPE</th> <th>NAME</th> <th>Memory(max)</th> <th>Memory(avg)</th> <th>CPU(max)</th> <th>CPU(avg)</th> <th>Traffic In</th> <th>Traffic Out</th> <th>Disc Read</th> <th>Disc Write</th>
+                    </tr>
+                    <tr>
+                         <td>Process</td> <td>node local-client.js(avg)</td> <td>64.0MB</td> <td>64.0MB</td> <td>23.64%</td> <td>8.81%</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td>
+                    </tr>
+                    <tr>
+                         <td>Docker</td> <td>burrow_0</td> <td>22.6MB</td> <td>18.1MB</td> <td>11.01%</td> <td>7.63%</td> <td>0B</td> <td>-</td> <td>0B</td> <td>112.0KB</td>
+                    </tr>
+                    <tr>
+                         <td>Docker</td> <td>burrow_1</td> <td>18.5MB</td> <td>15.5MB</td> <td>10.21%</td> <td>6.59%</td> <td>0B</td> <td>-</td> <td>0B</td> <td>80.0KB</td>
+                    </tr>
+                </table>
+                <h3>round 1</h3>
+                <strong class="tag">performance metrics</strong>
+                <table>
+                    <tr>
+                         <th>Name</th> <th>Succ</th> <th>Fail</th> <th>Send Rate</th> <th>Max Latency</th> <th>Min Latency</th> <th>Avg Latency</th> <th>Throughput</th>
+                    </tr>
+                    <tr>
+                         <td>open</td> <td>100</td> <td>0</td> <td>97.4 tps</td> <td>3.04 s</td> <td>2.05 s</td> <td>2.57 s</td> <td>32.0 tps</td>
+                    </tr>
+                </table>
+                <strong class="tag">resource consumption</strong>
+                <table>
+                    <tr>
+                         <th>TYPE</th> <th>NAME</th> <th>Memory(max)</th> <th>Memory(avg)</th> <th>CPU(max)</th> <th>CPU(avg)</th> <th>Traffic In</th> <th>Traffic Out</th> <th>Disc Read</th> <th>Disc Write</th>
+                    </tr>
+                    <tr>
+                         <td>Process</td> <td>node local-client.js(avg)</td> <td>56.8MB</td> <td>56.5MB</td> <td>20.23%</td> <td>7.75%</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td>
+                    </tr>
+                    <tr>
+                         <td>Docker</td> <td>burrow_0</td> <td>71.3MB</td> <td>60.0MB</td> <td>20.65%</td> <td>13.33%</td> <td>0B</td> <td>-</td> <td>0B</td> <td>84.0KB</td>
+                    </tr>
+                    <tr>
+                         <td>Docker</td> <td>burrow_1</td> <td>39.7MB</td> <td>38.8MB</td> <td>16.78%</td> <td>10.32%</td> <td>0B</td> <td>-</td> <td>0B</td> <td>80.0KB</td>
+                    </tr>
+                </table>
+                <h3>round 2</h3>
+                <strong class="tag">performance metrics</strong>
+                <table>
+                    <tr>
+                         <th>Name</th> <th>Succ</th> <th>Fail</th> <th>Send Rate</th> <th>Max Latency</th> <th>Min Latency</th> <th>Avg Latency</th> <th>Throughput</th>
+                    </tr>
+                    <tr>
+                         <td>open</td> <td>150</td> <td>0</td> <td>146.2 tps</td> <td>3.24 s</td> <td>2.24 s</td> <td>2.76 s</td> <td>45.4 tps</td>
+                    </tr>
+                </table>
+                <strong class="tag">resource consumption</strong>
+                <table>
+                    <tr>
+                         <th>TYPE</th> <th>NAME</th> <th>Memory(max)</th> <th>Memory(avg)</th> <th>CPU(max)</th> <th>CPU(avg)</th> <th>Traffic In</th> <th>Traffic Out</th> <th>Disc Read</th> <th>Disc Write</th>
+                    </tr>
+                    <tr>
+                         <td>Process</td> <td>node local-client.js(avg)</td> <td>58.3MB</td> <td>58.2MB</td> <td>18.31%</td> <td>6.65%</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td>
+                    </tr>
+                    <tr>
+                         <td>Docker</td> <td>burrow_0</td> <td>168.5MB</td> <td>146.7MB</td> <td>63.03%</td> <td>44.14%</td> <td>0B</td> <td>-</td> <td>0B</td> <td>516.0KB</td>
+                    </tr>
+                    <tr>
+                         <td>Docker</td> <td>burrow_1</td> <td>76.1MB</td> <td>70.9MB</td> <td>29.11%</td> <td>27.65%</td> <td>0B</td> <td>-</td> <td>0B</td> <td>516.0KB</td>
+                    </tr>
+                </table>
+                <h3>round 3</h3>
+                <strong class="tag">performance metrics</strong>
+                <table>
+                    <tr>
+                         <th>Name</th> <th>Succ</th> <th>Fail</th> <th>Send Rate</th> <th>Max Latency</th> <th>Min Latency</th> <th>Avg Latency</th> <th>Throughput</th>
+                    </tr>
+                    <tr>
+                         <td>open</td> <td>200</td> <td>0</td> <td>181.0 tps</td> <td>2.82 s</td> <td>1.54 s</td> <td>2.10 s</td> <td>54.5 tps</td>
+                    </tr>
+                </table>
+                <strong class="tag">resource consumption</strong>
+                <table>
+                    <tr>
+                         <th>TYPE</th> <th>NAME</th> <th>Memory(max)</th> <th>Memory(avg)</th> <th>CPU(max)</th> <th>CPU(avg)</th> <th>Traffic In</th> <th>Traffic Out</th> <th>Disc Read</th> <th>Disc Write</th>
+                    </tr>
+                    <tr>
+                         <td>Process</td> <td>node local-client.js(avg)</td> <td>59.8MB</td> <td>58.8MB</td> <td>20.68%</td> <td>6.71%</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td>
+                    </tr>
+                    <tr>
+                         <td>Docker</td> <td>burrow_0</td> <td>243.5MB</td> <td>206.5MB</td> <td>41.52%</td> <td>37.00%</td> <td>0B</td> <td>-</td> <td>0B</td> <td>564.0KB</td>
+                    </tr>
+                    <tr>
+                         <td>Docker</td> <td>burrow_1</td> <td>83.6MB</td> <td>79.9MB</td> <td>35.90%</td> <td>24.03%</td> <td>0B</td> <td>-</td> <td>0B</td> <td>544.0KB</td>
+                    </tr>
+                </table>
+                <h3>round 4</h3>
+                <strong class="tag">performance metrics</strong>
+                <table>
+                    <tr>
+                         <th>Name</th> <th>Succ</th> <th>Fail</th> <th>Send Rate</th> <th>Max Latency</th> <th>Min Latency</th> <th>Avg Latency</th> <th>Throughput</th>
+                    </tr>
+                    <tr>
+                         <td>open</td> <td>250</td> <td>0</td> <td>235.0 tps</td> <td>2.99 s</td> <td>1.20 s</td> <td>1.94 s</td> <td>66.8 tps</td>
+                    </tr>
+                </table>
+                <strong class="tag">resource consumption</strong>
+                <table>
+                    <tr>
+                         <th>TYPE</th> <th>NAME</th> <th>Memory(max)</th> <th>Memory(avg)</th> <th>CPU(max)</th> <th>CPU(avg)</th> <th>Traffic In</th> <th>Traffic Out</th> <th>Disc Read</th> <th>Disc Write</th>
+                    </tr>
+                    <tr>
+                         <td>Process</td> <td>node local-client.js(avg)</td> <td>64.9MB</td> <td>63.6MB</td> <td>18.89%</td> <td>6.37%</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td>
+                    </tr>
+                    <tr>
+                         <td>Docker</td> <td>burrow_0</td> <td>278.0MB</td> <td>261.2MB</td> <td>77.78%</td> <td>42.75%</td> <td>0B</td> <td>-</td> <td>0B</td> <td>572.0KB</td>
+                    </tr>
+                    <tr>
+                         <td>Docker</td> <td>burrow_1</td> <td>86.2MB</td> <td>85.3MB</td> <td>32.96%</td> <td>28.03%</td> <td>0B</td> <td>-</td> <td>0B</td> <td>840.0KB</td>
+                    </tr>
+                </table>
+                <h3>round 5</h3>
+                <strong class="tag">performance metrics</strong>
+                <table>
+                    <tr>
+                         <th>Name</th> <th>Succ</th> <th>Fail</th> <th>Send Rate</th> <th>Max Latency</th> <th>Min Latency</th> <th>Avg Latency</th> <th>Throughput</th>
+                    </tr>
+                    <tr>
+                         <td>open</td> <td>300</td> <td>0</td> <td>272.5 tps</td> <td>3.69 s</td> <td>1.67 s</td> <td>2.97 s</td> <td>73.7 tps</td>
+                    </tr>
+                </table>
+                <strong class="tag">resource consumption</strong>
+                <table>
+                    <tr>
+                         <th>TYPE</th> <th>NAME</th> <th>Memory(max)</th> <th>Memory(avg)</th> <th>CPU(max)</th> <th>CPU(avg)</th> <th>Traffic In</th> <th>Traffic Out</th> <th>Disc Read</th> <th>Disc Write</th>
+                    </tr>
+                    <tr>
+                         <td>Process</td> <td>node local-client.js(avg)</td> <td>69.8MB</td> <td>69.4MB</td> <td>18.64%</td> <td>5.68%</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td>
+                    </tr>
+                    <tr>
+                         <td>Docker</td> <td>burrow_0</td> <td>301.9MB</td> <td>286.6MB</td> <td>50.17%</td> <td>30.15%</td> <td>0B</td> <td>-</td> <td>0B</td> <td>1.0MB</td>
+                    </tr>
+                    <tr>
+                         <td>Docker</td> <td>burrow_1</td> <td>93.7MB</td> <td>88.9MB</td> <td>47.75%</td> <td>28.56%</td> <td>0B</td> <td>-</td> <td>0B</td> <td>1.0MB</td>
+                    </tr>
+                </table>
+        </div>
+        <div>
+            <h3>Test Environment</h3>
+            <strong class="tag">benchmark config</strong>
+            <pre id="benchmarkInfo">{
+  &quot;name&quot;: &quot;simple&quot;,
+  &quot;description&quot;: &quot;This is an example benchmark for caliper, to test the backend DLT&#39;s performance with simple account opening &amp; querying transactions&quot;,
+  &quot;clients&quot;: {
+    &quot;type&quot;: &quot;local&quot;,
+    &quot;number&quot;: 5
+  },
+  &quot;rounds&quot;: [
+    {
+      &quot;label&quot;: &quot;open&quot;,
+      &quot;description&quot;: &quot;Test description for the opening of an account through the deployed chaincode&quot;,
+      &quot;txNumber&quot;: [
+        50,
+        100,
+        150,
+        200,
+        250,
+        300
+      ],
+      &quot;rateControl&quot;: [
+        {
+          &quot;type&quot;: &quot;fixed-rate&quot;,
+          &quot;opts&quot;: {
+            &quot;tps&quot;: 50
+          }
+        },
+        {
+          &quot;type&quot;: &quot;fixed-rate&quot;,
+          &quot;opts&quot;: {
+            &quot;tps&quot;: 100
+          }
+        },
+        {
+          &quot;type&quot;: &quot;fixed-rate&quot;,
+          &quot;opts&quot;: {
+            &quot;tps&quot;: 150
+          }
+        },
+        {
+          &quot;type&quot;: &quot;fixed-rate&quot;,
+          &quot;opts&quot;: {
+            &quot;tps&quot;: 200
+          }
+        },
+        {
+          &quot;type&quot;: &quot;fixed-rate&quot;,
+          &quot;opts&quot;: {
+            &quot;tps&quot;: 250
+          }
+        },
+        {
+          &quot;type&quot;: &quot;fixed-rate&quot;,
+          &quot;opts&quot;: {
+            &quot;tps&quot;: 300
+          }
+        }
+      ],
+      &quot;arguments&quot;: {
+        &quot;money&quot;: 10000
+      },
+      &quot;callback&quot;: &quot;benchmark&#x2F;simple&#x2F;open.js&quot;
+    }
+  ]
+}</pre>
+            <strong class="tag">SUT</strong>
+            <pre id="sutdetails">not provided</pre>
+        </div>
+    </div>
+
+
+</main>
+
+</body>
+</html>
