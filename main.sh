@@ -10,6 +10,8 @@ echo "Qual consiguração deseja utilizar?"
 echo "[1] - 50/100/150/200/250/300"
 echo "[2] - 550/600/750/800/850/900"
 echo "[3] - 1050/1100/1150/1200/1250/1300"
+echo '[4]'
+echo '[5]'
 read config
 
 if [ $config = 1 ]
@@ -21,6 +23,12 @@ then
 elif [ $config = 3 ]
 then
     benchmarkPath=$baseDirectory'/benchmarks/config3.yaml'
+elif [ $config = 4 ]
+then
+    benchmarkPath=$baseDirectory'/benchmarks/config4.yaml'
+elif [ $config = 5 ]
+then
+    benchmarkPath=$baseDirectory'/benchmarks/config5.yaml'
 else
     echo 'Option not registered'
 fi
