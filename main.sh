@@ -1,77 +1,47 @@
 # #!bin/bash
 
 # Import functions
-source installPrerequisites.sh
+for file in functions/*.sh
+do
+    source $file
+done
 
-echo
-echo '########################################'
-echo '################# Menu #################'
-echo '########################################'
-echo '[1] - Install prerequisites for Linux'
-read option
-
-if [ $option = 1 ]
-then
-    installPrerequisites
-fi
-
-
+# Base directory
 baseDirectory=$PWD
 
-# echo "Deseja instalar os prerequisitos? [y/n]" ; read prerequisites
+# Variable for the menu
+option=-1
 
-# echo "Qual teste deseja realizar? [fabric/burrrow/all]" ; read testSdk
+# Program loop
+while [ $option -ne 0 ]; do
+    # Print menu
+    printMenu
 
-# echo "Qual consiguração deseja utilizar?"
-# echo "[1] - 50/100/150/200/250/300"
-# echo "[2] - 550/600/750/800/850/900"
-# echo "[3] - 1050/1100/1150/1200/1250/1300"
-# echo '[4]'
-# echo '[5]'
-# read config
+    # Read response
+    printf 'Response: '
+    read option
+    echo
 
-# if [ $config = 1 ]
-# then
-#     benchmarkPath=$baseDirectory'/benchmarks/config.yaml'
-# elif [ $config = 2 ]
-# then
-#     benchmarkPath=$baseDirectory'/benchmarks/config2.yaml'
-# elif [ $config = 3 ]
-# then
-#     benchmarkPath=$baseDirectory'/benchmarks/config3.yaml'
-# elif [ $config = 4 ]
-# then
-#     benchmarkPath=$baseDirectory'/benchmarks/config4.yaml'
-# elif [ $config = 5 ]
-# then
-#     benchmarkPath=$baseDirectory'/benchmarks/config5.yaml'
-# else
-#     echo 'Option not registered'
-# fi
-
-
-# if [ $prerequisites = 'y' ]
-# then
-#     bash scripts/install-prerequisites.sh
-# fi
-
-
-
-# cd caliper
-# npm install
-# if [ $testSdk = 'all' ]
-# then
-#     cd ../scripts
-#     bash test-burrow.sh $benchmarkPath
-#     bash test-fabric.sh $benchmarkPath
-# elif [ $testSdk = 'burrow' ]
-# then
-#     cd ../scripts
-#     bash test-burrow.sh $benchmarkPath
-# elif [ $testSdk = 'fabric' ]
-# then
-#     cd ../scripts
-#     bash test-fabric.sh $benchmarkPath
-# else
-#     echo 'Option not registered'
-# fi
+    # Execute what was chosen
+    if [ $option -eq 1 ]
+    then
+        installPrerequisites $baseDirectory
+    elif [ $option -eq 2 ]
+    then
+        installCaliperDependencies $baseDirectory
+    elif [ $option -eq 3 ]
+    then
+        testAll $baseDirectory
+    elif [ $option -eq 4 ]
+    then
+        testBurrow $baseDirectory
+    elif [ $option -eq 5 ]
+    then
+        testFabric $baseDirectory
+    elif [ $option -eq 0 ]
+    then
+        echo 'Program finished'
+    else
+        echo 'Option not registered'
+    fi
+done
