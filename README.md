@@ -1,7 +1,7 @@
 <p align="center">
   <img src="https://github.com/lucas54neves/caliper-ic/blob/master/.github/cnpq-logo.png" alt="CNPq" width="200"/>
   <img src="https://github.com/lucas54neves/caliper-ic/blob/master/.github/ufla-logo.png" alt="UFLA" width="200"/>
-  <img src="https://github.com/lucas54neves/caliper-ic/blob/master/.github/caliper-logo.png" alt="Hyperledger Caliper" width="80"/>
+  <img src="https://github.com/lucas54neves/caliper-ic/blob/master/.github/caliper-logo.png" alt="Hyperledger Caliper" width="240"/>
 </p>
 
 
@@ -25,7 +25,6 @@
   <a href="https://github.com/lucas54neves/caliper-ic/stargazers">
     <img alt="Stargazers" src="https://img.shields.io/github/stars/lucas54neves/caliper-ic?color=orange&logo=github">
   </a>
-</p>
 
 <b>Scholarship:</b> <em>National Council for Scientific and Technological Development (<a href="http://cnpq.br/">CNPq</a>)</em>
 <br>
